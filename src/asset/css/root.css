@@ -1,0 +1,164 @@
+@font-face{
+    font-family:"Dark";
+    src: url(/asset/NexaD.otf);
+}
+@font-face{
+    font-family:"Light";
+    src: url(/asset/NexaL.otf);
+}
+
+h1{
+    font-family: Dark;
+    font-size:2em;
+    padding: 30px 10px 20px 10px;
+}
+h2{
+    font-family:Dark;
+    padding: 30px 10px 20px 10px;
+    font-size: 1.6em;
+}
+h3{
+    font-family:Dark;
+    font-size:1.4em;
+    padding: 30px 10px 20px 10px;
+}
+h4{
+    font-family: Dark;
+    font-size: 1.3em;
+}
+.last-flex{
+    display: flex;
+    padding: 1px;
+}
+
+p,label,span{
+    font-family: Light;
+    font-size:1em;
+    margin:0 15px;
+    letter-spacing: 1px;
+}
+a{
+    font-family: Light;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+.test{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.test > ul{
+    display: block;
+    display: flex;
+}
+#res-menu{
+    display: none;
+}
+#sign-two{
+    font-size: 20px;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+}
+#sign-one{
+    font-size:20px;
+    line-height: 60px;
+    cursor: pointer;
+}
+#sign-one{
+    display: block;
+}
+ul{
+    display: none;
+}
+#res-menu:checked ~ label #sign-one{
+    display: none;
+
+    }
+#res-menu:checked ~ label #sign-two{
+    display: block;
+}
+#res-menu:checked ~ ul{
+    display: block;
+}
+.menu-1{
+    display: flex;
+}
+.image-01{
+    height:50%;
+    width: 40%;
+    max-width:250px;
+    max-height: 40px;
+    padding:15px;
+}
+#btn1{
+    height:40px;
+    width:140px;
+    border-radius: 3px;
+    background-color: white;
+    border:2px solid #152238;
+}
+#btn2{
+    height: 40px;
+    width:140px;
+    border-radius: 3px;
+    color:white;
+    background-color: #152238;
+    border:2px solid #152238;
+}
+.btn-first{
+    color:white;
+    background-color: #152238;
+    border:2px solid #152238;
+    border-radius:2px;
+    height:42px;
+    width:120px;
+    margin:1px 0;
+}
+.icon-size{
+    padding: 5px;
+    margin:0;
+}
+@media only screen and (max-device-width:1023px){
+.btni{
+    display: none;
+}
+.test > ul{
+    display: none;
+}
+}
+@media only screen and (min-device-width:1023px){
+    #sign-one{
+        display: none;
+    }
+    .test > .btni{
+        margin:20px 70px 20px 0;
+    }
+    .temp{
+        display: none;
+    }
+    }
+
+@media only screen and (min-device-width:1023px){
+    li{
+        padding:0 10px;
+        line-height: 5;
+        font-family: Light;
+    }
+    .btni{
+        display: "";
+    }
+    .image-01{
+        padding:20px 70px;
+        width:70%;
+    }
+    .test > .imagei{
+        height:80px;
+        width:200px;
+    }
+    ul{
+        display: block;
+    }
+}

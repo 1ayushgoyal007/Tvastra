@@ -1,0 +1,361 @@
+
+.corner-icon{
+    margin-left: auto;
+    padding-right: 20px;
+    border-bottom: 1px solid #EAEAEB;
+    text-align:right;
+    height:80px;
+    line-height: 70px;
+}
+.header{
+    display:flex;
+    justify-content: space-around;
+}
+.menu-1{
+    display: flex;
+    font-size:1.1em;
+}
+.menu-1 > p {
+    margin:30px 10px 10px 10px;
+}
+.drop-down{
+    display:flex;
+    justify-content: space-between;
+    margin:10px;
+}
+.Drp-down{
+    height:50px;
+    width:100px;
+    margin:20px 0px;
+    background-color: silver;
+}
+.drop-down > h2{
+    margin:  0px;
+    padding-left: 0;
+}
+.blue-line{
+    position: absolute;
+    padding:0;
+    margin:0;
+    bottom:30px;
+    left:0;
+}
+.blue-line::before{
+    display: block;
+    content: "";
+    border-top: .2rem solid #87ceeb;
+    width: 2rem;
+    transform: translateY(0.5rem);
+}
+
+.blue-color{
+    color:skyblue;
+    position: relative;
+    padding-left: 0;    
+}
+.blue-color ::before{
+    display: block;
+    content: "";
+    border-top: .2rem solid #87ceeb;
+    width: 0rem;
+    transform: translateY(0.9rem);
+
+}
+.color-blue{
+    color:#87CEEB;
+    margin-left:0;
+    padding-left:0;
+}
+.color-blue::before{
+    display: block;
+    content: "";
+    border-top: .2rem solid #87ceeb;
+    width: 2rem;
+    transform: translateY(0.5rem);
+}
+.add{
+    display: flex;
+}
+.blue-color > h2{
+    margin-left: 0;
+    padding-left:20px;
+}
+
+.new-line::before{
+    display: block;
+    content: "";
+    border-top: .2rem solid #87ceeb;
+    width: 2rem;
+    transform: translateY(0.5rem);
+    margin:0;
+}
+.container{
+    border:1px solid black;
+    margin:10px;
+}
+.icons{
+    display:flex;
+}
+.icon-image{
+    height: 20px;
+    width:20px;
+    margin:10px;
+    color: skyblue;
+}
+
+.icon-p{
+    margin:10px 0;
+}
+.buttons{
+margin:1px 0px 0px 10px;
+}
+
+.check{
+    display: flex;
+    justify-content: space-between; 
+    width:102%;
+}
+.sidebar > h3{
+    color:skyblue;
+}
+.btns{
+    background-color: white;
+    border:1px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    margin:0;
+    margin-top: 5px;
+}
+.call-now{
+    margin-right: auto;
+}
+.call-btn{
+    margin:30px 10px;
+    background-color: #152238;
+    color:white;
+    border:1px solid #152238;
+    padding:10px;
+    width:180px;
+    height:40px;
+}
+.hospital-img{
+    width:100%;
+    height:80%;
+}
+#need-help{
+    text-align: center;
+    background-color: #8fcaf1;
+    padding:40px;
+}
+#white-h2{
+    color:white;
+    margin-top:0;
+    padding-top:0;
+    font-family: Dark;
+}
+.white-h4{
+    color:white
+}
+.btn-last{
+    color:white;
+    background-color: #0099ff;
+    border:2px solid #0099ff;
+    border-radius:5px;
+    height:60px;
+    width:200px;
+    margin:0;
+    
+}
+#last-block{
+    text-align: center;
+    background-color: #021423;
+    padding: 1rem;
+}
+#last-block > div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.last-block-p{
+    color:#cccccc;
+    margin:10px;
+}
+#last-footer1{
+    color:#636668;
+}
+#last-image{
+	height:20%;
+	width:150px;
+    margin:10px 0;
+}
+.corner{
+    padding-right:40px;
+}
+.icon-img{
+    width: 30px;
+    height: 60px;
+    margin-bottom: 0;
+}
+
+#last-footer {
+    display: flex;
+    justify-content: space-between;
+    margin:20px 0 0 0;
+}
+#last-footer > div > p{
+    margin-left:0;
+}
+#footer{
+	display: flex;
+    justify-content: flex-start;
+    line-height: 3;
+}
+.very-last > div{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content{
+    margin:0 20px 0 0 ;
+}
+#need-help > div > p{
+    margin-bottom: 20px;
+}
+@media only screen and (max-device-width:767px){
+
+    .very-last{
+        display: none;
+    }
+    .call-now{
+        text-align: center;
+    }
+}
+@media only screen 
+ and (min-device-width : 767px) 
+ {
+     .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .container > div{
+        display: flex;
+        flex-direction: column;
+    }
+     .container > .hospital-img{
+         width:250px;
+         height:366px;
+         object-fit: cover;
+     }
+     #last-block{
+        display: none;
+    }
+    #footer{
+        margin-left:40px;
+    }
+    .footer-content{
+        margin:0 10px 0 0;
+    }
+    #last-footer > div > p{
+        margin-left:40px;
+    }
+    .very-last{
+        padding:20px 0;
+        font-weight: bolder;
+    }
+    #last-image{
+        padding-right:40px;
+    }
+ }
+ @media only screen and (max-device-width:1023px){
+     .sidebar{
+         display: none;
+     }
+     .menu-1{
+         display: none;
+     }
+     .menu-2{
+         display: none;
+     }
+ }
+ @media only screen and (min-device-width:1023px){
+    .sidebar > .check-box{
+        display: flex;
+        flex-direction: column; 
+        padding-left:20px; 
+    }
+    .container > .hospital-img{
+        width:250px;
+        height:365px;
+        object-fit: cover;
+    }
+    .btns{
+        font-size:0.95em;
+    }
+    .check-box > div{
+        margin:2px;
+    }
+    .main{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .corner-icon{
+        display: none;
+    }
+
+    #need-help {
+        display: flex;
+        justify-content: space-between;
+    }
+    #need-help > div{
+        text-align: left;
+    }
+    #need-help > div > p{
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+    #need-help > div > h2{
+        margin-left: 0;
+        padding-left:0;
+    }
+    .shift{
+        margin-left:0;
+        padding-left: 0;
+    }
+    .side-flex{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding-left:30px;
+      }
+    #footer{
+        margin:0;
+    }
+    #last-footer > div > p{
+        margin:0;
+    }
+    .corner{
+        padding: 0;
+    }
+    .very-last{
+        padding:40px;
+        font-weight: bolder;
+    }
+    .very-last > div{
+        padding:0;
+        margin: 0;
+    }
+    .fa-search , .fa-minus{
+        margin-top: 30px;
+    }
+    #last-image{
+        margin:0;
+        padding:0;
+    }
+ }
+ @media only screen and (min-device-width:1280px){
+     .container{
+         width:1000px;
+     }
+ }
