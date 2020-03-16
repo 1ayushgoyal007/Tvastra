@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="asset/css/hospital.css">
 </head>
 <body>
-    <nav class="test" >
+
+
+
+    <nav class="nav-bar" >
         <div class="imagei" >
         <img class= "image-01" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png">
         </div>
@@ -31,6 +34,12 @@
         <button id = "btn2" >Get a Qoute</button>
         </div>
     </nav>
+
+
+    <div class="hero" >
+        <h1>Hospitals in <a href="#" >Delhi</a></h1>
+    </div>
+
     <div class="drop-down">
         <h2>Home/Hospital List</h2>
         <select class="Drp-down">
@@ -40,9 +49,12 @@
     </div>
     <div class="main" >
     <div class="side-flex" >
+        <div class="filter">
+            <h5 class="filter-h5" >Filter by</h5>
+        </div>
         <div class="sidebar">
             <div class="check" >
-            <h2>Location</h2>
+            <h4>Location</h4>
             <i class="fa fa-search icon-image" aria-hidden="true"></i>
 
             <i class="fa fa-minus icon-image aria-hidden="true"></i>
@@ -75,12 +87,12 @@
                 </div>
     
             </div>
-            <h3>+ Show More</h3>
+            <h4 class="show-more" >+ Show More</h4>
             <hr/>
           </div>
           <div class="sidebar">
             <div class="check" >
-                <h2>Treatments</h2>
+                <h4>Treatments</h4>
             <i class="fa fa-search icon-image" aria-hidden="true"></i>
             <i class="fa fa-minus icon-image" aria-hidden="true"></i>
 
@@ -112,12 +124,12 @@
                 </div>
     
             </div>
-            <h3 class="check" >+ Show More</h3>
+            <h4 class="show-more" >+ Show More</h4>
             <hr/>
           </div>
           <div class="sidebar">
             <div class="check" >
-                <h2>Hospitals</h2>
+                <h4>Hospitals</h4>
                 <i class="fa fa-search icon-image" aria-hidden="true"></i>
                 <i class="fa fa-minus icon-image aria-hidden="true"></i>
 
@@ -148,12 +160,12 @@
                     <label>Ciims</label>
                     </div>
                 </div>
-            <h3 class="check">+ Show More</h3>
+            <h4 class="show-more">+ Show More</h4>
             <hr/>
           </div>
           <div class="sidebar">
             <div class="check" >
-                <h2>Years of Experience</h2>
+                <h4>Years of Experience</h4>
                 <i class="fa fa-search icon-image" aria-hidden="true"></i>
                 <i class="fa fa-minus icon-image aria-hidden="true"></i>
 
@@ -184,7 +196,7 @@
                 <label>80+</label>
                 </div>
             </div>
-            <h3 class="check">+ Show More</h3>
+            <h4 class="show-more">+ Show More</h4>
             <hr/>
           </div>
         </div>
@@ -194,17 +206,23 @@
         <div class="new-add">
             <h2 class="add color-blue">Apollo Hospital</h2>
         </div>
+        <div class="Hospital-features" >
+        <div>
         <div class="icons" >
-            <i  class="fa fa-map-marker icon-image aria-hidden="true"></i>
+            <i  class="fa fa-map-marker icon-image" aria-hidden="true"></i>
             <span class="icon-p" >Delhi , Mathura Road , Sarita Vihar , Delhi-110076</span>
         </div>
         <div class="icons" >
             <i class="fa fa-bed icon-image" aria-hidden="true"></i>
             <span class="icon-p" >100 Beds</span>
         </div>
+        </div>
+        <div>
         <div class="icons" >
             <i class="fa fa-stethoscope icon-image" aria-hidden="true"></i>
             <span class="icon-p" >Famous Treatments</span>
+        </div>
+        </div>
         </div>
         <div class="buttons" >
             <button class="btns" >Multi organ Transplant</button>
@@ -222,103 +240,161 @@
         </div>
         <img class="hospital-img" src="https://i.ytimg.com/vi/-tgHw3wUWoY/maxresdefault.jpg" alt="Hospital">
     </div>
- <div class="container" >
-    <div>
+    <div class="container" >
+        <div>
+        <div class="new-add">
+            <h2 class="add color-blue">Fortis Hospital</h2>
+        </div>
+        <div class="Hospital-features" >
+        <div>
+        <div class="icons" >
+            <i  class="fa fa-map-marker icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >Delhi , Mathura Road , Sarita Vihar , Delhi-110076</span>
+        </div>
+        <div class="icons" >
+            <i class="fa fa-bed icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >100 Beds</span>
+        </div>
+        </div>
+        <div>
+        <div class="icons" >
+            <i class="fa fa-stethoscope icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >Famous Treatments</span>
+        </div>
+        </div>
+        </div>
+        <div class="buttons" >
+            <button class="btns" >Multi organ Transplant</button>
+            <button class="btns" >Orthopedic Surgery </button>
+            <button class="btns">Infertility Treatment</button>
+            <button class="btns">Dentistry</button>
+            <button class="btns">Cardiology</button>
+            <button class="btns">CAncer</button>
+            <button class="btns">+40 more</button>
+        </div>
 
-    <div class="new-add">
-        <h2 class="add color-blue">Fortis Hospital</h2>
+        <div class = "call-now" >
+            <button class="call-btn" >Call Now </button> 
+        </div>
+        </div>
+        <img class="hospital-img" src="https://i.ytimg.com/vi/-tgHw3wUWoY/maxresdefault.jpg" alt="Hospital">
     </div>
-    <div class="icons" >
-        <i  class="fa fa-map-marker icon-image aria-hidden="true"></i>
-        <span class="icon-p" >Delhi , Mathura Road , Sarita Vihar , Delhi-110076</span>
-    </div>
-    <div class="icons" >
-        <i class="fa fa-bed icon-image" aria-hidden="true"></i>
-        <span class="icon-p" >100 Beds</span>
-    </div>
-    <div class="icons" >
-        <i class="fa fa-stethoscope icon-image" aria-hidden="true"></i>
-        <span class="icon-p" >Famous Treatments</span>
-    </div>
-    <div class="buttons" >
-        <button class="btns" >Multi organ Transplant</button>
-        <button class="btns" >Orthopedic Surgery </button>
-        <button class="btns">Infertility Treatment</button>
-        <button class="btns">Dentistry</button>
-        <button class="btns">Cardiology</button>
-        <button class="btns">CAncer</button>
-        <button class="btns">+40 more</button>
-    </div>
-    <div class = "call-now" >
-        <button class="call-btn" >Call Now </button> 
-    </div>
-</div>
-    <img class="hospital-img" src="http://www.medgurus.org/wp-content/uploads/2016/01/Fortis-Hospital.jpg" alt="Hospital">
-</div>
-<div class="container" >
-    <div>
-    <div class="new-add">
-        <h2 class="add color-blue">Rockland Hospital</h2>
-    </div>
-    <div class="icons" >
-        <i  class="fa fa-map-marker icon-image aria-hidden="true"></i>
-        <span class="icon-p" >Delhi , Mathura Road , Sarita Vihar , Delhi-110076</span>
-    </div>
-    <div class="icons" >
-        <i class="fa fa-bed icon-image" aria-hidden="true"></i>
-        <span class="icon-p" >100 Beds</span>
-    </div>
-    <div class="icons" >
-        <i class="fa fa-stethoscope icon-image" aria-hidden="true"></i>
-        <span class="icon-p" >Famous Treatments</span>
-    </div>
-    <div class="buttons" >
-        <button class="btns" >Multi organ Transplant</button>
-        <button class="btns" >Orthopedic Surgery </button>
-        <button class="btns">Infertility Treatment</button>
-        <button class="btns">Dentistry</button>
-        <button class="btns">Cardiology</button>
-        <button class="btns">CAncer</button>
-        <button class="btns">+40 more</button>
-    </div>
-    <div class = "call-now" >
-        <button class="call-btn" >Call Now </button> 
-    </div>
-    </div>
-    <img class="hospital-img" src="https://www.nyoooz.com/hindi/nyoooz-images/rockland_hospital.jpg" alt="Hospital">
-</div>
-<div class="container" >
-    <div>
+    <div class="container" >
+        <div>
+        <div class="new-add">
+            <h2 class="add color-blue">Rockland Hospital</h2>
+        </div>
+        <div class="Hospital-features" >
+        <div>
+        <div class="icons" >
+            <i  class="fa fa-map-marker icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >Delhi , Mathura Road , Sarita Vihar , Delhi-110076</span>
+        </div>
+        <div class="icons" >
+            <i class="fa fa-bed icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >100 Beds</span>
+        </div>
+        </div>
+        <div>
+        <div class="icons" >
+            <i class="fa fa-stethoscope icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >Famous Treatments</span>
+        </div>
+        </div>
+        </div>
+        <div class="buttons" >
+            <button class="btns" >Multi organ Transplant</button>
+            <button class="btns" >Orthopedic Surgery </button>
+            <button class="btns">Infertility Treatment</button>
+            <button class="btns">Dentistry</button>
+            <button class="btns">Cardiology</button>
+            <button class="btns">CAncer</button>
+            <button class="btns">+40 more</button>
+        </div>
 
-    <div class="new-add">
-        <h2 class="add color-blue">Primus Hospital</h2>
+        <div class = "call-now" >
+            <button class="call-btn" >Call Now </button> 
+        </div>
+        </div>
+        <img class="hospital-img" src="https://i.ytimg.com/vi/-tgHw3wUWoY/maxresdefault.jpg" alt="Hospital">
     </div>
-    <div class="icons" >
-        <i  class="fa fa-map-marker icon-image aria-hidden="true"></i>
-        <span class="icon-p" >Delhi , Mathura Road , Sarita Vihar , Delhi-110076</span>
+    <div class="container" >
+        <div>
+        <div class="new-add">
+            <h2 class="add color-blue">Primus Hospital</h2>
+        </div>
+        <div class="Hospital-features" >
+        <div>
+        <div class="icons" >
+            <i  class="fa fa-map-marker icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >Delhi , Mathura Road , Sarita Vihar , Delhi-110076</span>
+        </div>
+        <div class="icons" >
+            <i class="fa fa-bed icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >100 Beds</span>
+        </div>
+        </div>
+        <div>
+        <div class="icons" >
+            <i class="fa fa-stethoscope icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >Famous Treatments</span>
+        </div>
+        </div>
+        </div>
+        <div class="buttons" >
+            <button class="btns" >Multi organ Transplant</button>
+            <button class="btns" >Orthopedic Surgery </button>
+            <button class="btns">Infertility Treatment</button>
+            <button class="btns">Dentistry</button>
+            <button class="btns">Cardiology</button>
+            <button class="btns">CAncer</button>
+            <button class="btns">+40 more</button>
+        </div>
+
+        <div class = "call-now" >
+            <button class="call-btn" >Call Now </button> 
+        </div>
+        </div>
+        <img class="hospital-img" src="https://i.ytimg.com/vi/-tgHw3wUWoY/maxresdefault.jpg" alt="Hospital">
     </div>
-    <div class="icons" >
-        <i class="fa fa-bed icon-image" aria-hidden="true"></i>
-        <span class="icon-p" >100 Beds</span>
-    </div>
-    <div class="icons" >
-        <i class="fa fa-stethoscope icon-image" aria-hidden="true"></i>
-        <span class="icon-p" >Famous Treatments</span>
-    </div>
-    <div class="buttons" >
-        <button class="btns" >Multi organ Transplant</button>
-        <button class="btns" >Orthopedic Surgery </button>
-        <button class="btns">Infertility Treatment</button>
-        <button class="btns">Dentistry</button>
-        <button class="btns">Cardiology</button>
-        <button class="btns">CAncer</button>
-        <button class="btns">+40 more</button>
-    </div>
-    <div class = "call-now" >
-        <button class="call-btn" >Call Now </button> 
-    </div>
-    </div>
-    <img class="hospital-img" src="https://www.bing.com/th?id=OIP.hYYs1emIinoQdaoygtxVBQHaE_&pid=Api&rs=1" alt="Hospital">
+    <div class="container" >
+        <div>
+        <div class="new-add">
+            <h2 class="add color-blue">Apollo Hospital</h2>
+        </div>
+        <div class="Hospital-features" >
+        <div>
+        <div class="icons" >
+            <i  class="fa fa-map-marker icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >Delhi , Mathura Road , Sarita Vihar , Delhi-110076</span>
+        </div>
+        <div class="icons" >
+            <i class="fa fa-bed icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >100 Beds</span>
+        </div>
+        </div>
+        <div>
+        <div class="icons" >
+            <i class="fa fa-stethoscope icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >Famous Treatments</span>
+        </div>
+        </div>
+        </div>
+        <div class="buttons" >
+            <button class="btns" >Multi organ Transplant</button>
+            <button class="btns" >Orthopedic Surgery </button>
+            <button class="btns">Infertility Treatment</button>
+            <button class="btns">Dentistry</button>
+            <button class="btns">Cardiology</button>
+            <button class="btns">CAncer</button>
+            <button class="btns">+40 more</button>
+        </div>
+
+        <div class = "call-now" >
+            <button class="call-btn" >Call Now </button> 
+        </div>
+        </div>
+        <img class="hospital-img" src="https://i.ytimg.com/vi/-tgHw3wUWoY/maxresdefault.jpg" alt="Hospital">
     </div>
     </div>
     </div>
@@ -330,34 +406,16 @@
         <button class="btn-last">Submit your query</button>
     </div>
 
-    <div id = "last-block">
-        <img class="image-01" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png">
+    <footer class="very-last" >
         <div>
-        <h4 class="white-h4">TVASTRA</h4>
-        <span class="last-block-p">Doctor</span>
-        <span class="last-block-p">Hospitals</span>
-        <span class="last-block-p">Treatment</span>
-        <span class="last-block-p">Other services</span>
-        <p class="last-block-p">FAQs</p>
-        <h4 class="white-h4">FOLLOW US</h4>
-        <span class="last-block-p">FAcebook</span>
-        <span class="last-block-p">pinterest</span>
-        <span class="last-block-p">Twitter</span>
-        <span class="last-block-p">Google</span>
-        <span class="last-block-p">Instagram</span>
-        <p id = "last-footer1">All rights reserved tvastra 2018</p>
-        </div>
-    </div>
-    <div class="very-last" >
-        <div>
-            <div id = "footer">
-                <span class="footer-content">Doctors</span>
-                <span class="footer-content">Hospitals</span>
-                <span class="footer-content">Treatments</span>
-                <span class="footer-content">Other Services</span>
-                <span class="footer-content">FAQs</span>
-            </div>
         <img id="last-image" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png">
+        <div id = "footer">
+            <span class="footer-content">Doctors</span>
+            <span class="footer-content">Hospitals</span>
+            <span class="footer-content">Treatments</span>
+            <span class="footer-content">Other Services</span>
+            <span class="footer-content">FAQs</span>
+        </div>
         </div>
         <div id = "last-footer">
             <div>
@@ -371,6 +429,7 @@
                 <i class="fa fa-instagram icon-size" aria-hidden="true"></i>
             </div>
         </div>
-    </div>
+    </footer>
+
 </body>
 </html>

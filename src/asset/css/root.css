@@ -6,15 +6,17 @@
     font-family:"Light";
     src: url(/asset/NexaL.otf);
 }
-
+body{
+    letter-spacing: 0.5px;
+}
 h1{
     font-family: Dark;
-    font-size:2em;
-    padding: 30px 10px 20px 10px;
+    font-size:1.8em;
+    padding: 20px;
 }
 h2{
     font-family:Dark;
-    padding: 30px 10px 20px 10px;
+    padding: 20px;
     font-size: 1.6em;
 }
 h3{
@@ -31,11 +33,21 @@ h4{
     padding: 1px;
 }
 
-p,label,span{
+p,span{
     font-family: Light;
     font-size:1em;
-    margin:0 15px;
+    margin:0 20px;
     letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+label{
+    font-family: Light;
+    font-size:1em;
+    margin:0 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 0.9;
 }
 a{
     font-family: Light;
@@ -43,13 +55,14 @@ a{
     text-decoration: none;
     color: black;
     font-weight: bolder;
+    font-size: 0.95em;
 }
-.test{
+.nav-bar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.test > ul{
+.nav-bar > ul{
     display: block;
     display: flex;
 }
@@ -97,6 +110,7 @@ ul{
     height:40px;
     width:140px;
     border-radius: 3px;
+    font-size: 0.8em;
     background-color: white;
     border:2px solid #152238;
 }
@@ -105,6 +119,7 @@ ul{
     width:140px;
     border-radius: 3px;
     color:white;
+    font-size: 0.8em;
     background-color: #152238;
     border:2px solid #152238;
 }
@@ -113,39 +128,94 @@ ul{
     background-color: #152238;
     border:2px solid #152238;
     border-radius:2px;
-    height:42px;
-    width:120px;
-    margin:1px 0;
+    height:47px;
+    width:130px;
+    margin:0;
 }
 .icon-size{
     padding: 5px;
     margin:0;
 }
+@media only screen and (max-device-width:767px){
+    .very-last{
+        background-color: #021423;
+        display: flex;
+        flex-direction: column;
+        color: #CCCCCC;
+        padding: 20px ;
+        align-items: center;
+    }
+    #footer{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+    .footer-content{
+        padding: 5px;
+        text-align: center;
+        line-height: 2;
+        font-weight: bolder;
+    }
+    .corner{
+        padding: 10px;
+    }
+    #last-footer{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        align-items: center;
+    }
+    #last-footer > div > p{
+        padding: 20px 0;
+        margin: 0;
+    }
+    #last-image{
+        margin:0;
+        padding: 20px;
+        height: 20%;
+        width: 150px;
+        text-align: center;
+    }
+}
 @media only screen and (max-device-width:1023px){
 .btni{
     display: none;
 }
-.test > ul{
+.nav-bar > ul{
     display: none;
 }
 }
 @media only screen and (min-device-width:1023px){
-    #sign-one{
-        display: none;
+    h1{
+        font-size:2.2em;
     }
-    .test > .btni{
-        margin:20px 70px 20px 0;
+    h2{
+        font-size: 2em;
     }
-    .temp{
-        display: none;
+    h3{
+        font-size:1.8em;
     }
+    h4{
+        font-family: Dark;
+        font-size: 1.4em;
     }
-
-@media only screen and (min-device-width:1023px){
+    p,plabel,span{
+        font-size: 1.1em;
+        font-weight: 500;
+        line-height: 1.5;
+    }
     li{
         padding:0 10px;
         line-height: 5;
         font-family: Light;
+    }
+    .btn-first{
+        height: 47px;
+        width: 130px;
     }
     .btni{
         display: "";
@@ -154,11 +224,20 @@ ul{
         padding:20px 70px;
         width:70%;
     }
-    .test > .imagei{
+    .nav-bar > .imagei{
         height:80px;
         width:200px;
     }
     ul{
         display: block;
+    }
+    #sign-one{
+        display: none;
+    }
+    .nav-bar> .btni{
+        margin:20px 70px 20px 0;
+    }
+    .temp{
+        display: none;
     }
 }

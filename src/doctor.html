@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="asset/css/doctor.css">
 </head>
 <body>
-    <nav class="test" >
+    <nav class="nav-bar" >
         <div class="imagei" >
         <img class= "image-01" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png">
         </div>
@@ -31,6 +31,18 @@
         <button id = "btn2" >Get a Qoute</button>
         </div>
     </nav>
+
+
+
+
+    <div class="hero" >
+        <h1>Cardiac Surgeons in <a href="#" >Delhi</a></h1>
+    </div>
+
+
+
+    
+
     <div class="drop-down">
         <h2>Home/Doctor List</h2>
         <select class="Drp-down">
@@ -38,15 +50,27 @@
             <option >doctor</option>
         </select>
     </div>
+
+
     <div class="main" >
     <div class="side-flex" >
+        <div class="filter">
+            <h5 class="filter-h5" >Filter by</h5>
+            <div class="buttons" >
+                <button class="btns">DLF cyber City<i class="fa fa-times inside-btn"></i></button>
+                <button class="btns" >Multi Organ Transplant<i class="fa fa-times inside-btn"></i></button>
+                <button class="btns" >Apollo Hospital<i class="fa fa-times inside-btn"></i></button>
+                <button class="btns" >30+<i class="fa fa-times inside-btn"></i></button>
+            </div>
+        </div>
+        <div class="applied-filters" >
         <div class="sidebar">
             <div class="check" >
-            <h2>Location</h2>
+            <h4>Location</h4>
             <i class="fa fa-search icon-image" aria-hidden="true"></i>
 
             <i class="fa fa-minus icon-image aria-hidden="true"></i>
-        </div>
+            </div>
             
             <div class="check-box" >
                 <div class="last-flex" > 
@@ -75,12 +99,12 @@
                 </div>
     
             </div>
-            <h3>+ Show More</h3>
+            <h4 class="show-more" >+ Show More</h4>
             <hr/>
           </div>
           <div class="sidebar">
             <div class="check" >
-                <h2>Treatments</h2>
+                <h4>Treatments</h4>
             <i class="fa fa-search icon-image" aria-hidden="true"></i>
             <i class="fa fa-minus icon-image" aria-hidden="true"></i>
 
@@ -112,12 +136,12 @@
                 </div>
     
             </div>
-            <h3 class="check" >+ Show More</h3>
+            <h4 class="show-more" >+ Show More</h4>
             <hr/>
           </div>
           <div class="sidebar">
             <div class="check" >
-                <h2>Hospitals</h2>
+                <h4>Hospitals</h4>
                 <i class="fa fa-search icon-image" aria-hidden="true"></i>
                 <i class="fa fa-minus icon-image aria-hidden="true"></i>
 
@@ -148,12 +172,12 @@
                     <label>Ciims</label>
                     </div>
                 </div>
-            <h3 class="check">+ Show More</h3>
-            <hr/>
+                <h4 class="show-more" >+ Show More</h4>
+                <hr/>
           </div>
           <div class="sidebar">
             <div class="check" >
-                <h2>Years of Experience</h2>
+                <h4>Years of Experience</h4>
                 <i class="fa fa-search icon-image" aria-hidden="true"></i>
                 <i class="fa fa-minus icon-image aria-hidden="true"></i>
 
@@ -184,15 +208,15 @@
                 <label>80+</label>
                 </div>
             </div>
-            <h3 class="check">+ Show More</h3>
-            <hr/>
+            <h4 class="show-more" >+ Show More</h4>
+          </div>
           </div>
         </div>
     <div >
     <div class="container" >
         <div>
             <div class="new-add">
-                <h2 class="add color-blue">Duke Sanson</h2>
+                <h3 class="add color-blue">Duke Sanson</h3>
             </div>
             <div class="details" >
             <div>
@@ -229,7 +253,7 @@
  <div class="container" >
     <div>
         <div class="new-add">
-            <h2 class="add color-blue">Shubham Shinde</h2>
+            <h3 class="add color-blue">Shubham Shinde</h3>
         </div>
         <div class="details" >
             <div>
@@ -266,7 +290,7 @@
 <div class="container" >
     <div>
         <div class="new-add">
-            <h2 class="add color-blue">Prakhar</h2>
+            <h3 class="add color-blue">Prakhar</h3>
         </div>
         <div class="details" >
             <div>
@@ -304,7 +328,7 @@
     <div>
 
     <div class="new-add">
-        <h2 class="add color-blue">Deep Chandra</h2>
+        <h3 class="add color-blue">Deep Chandra</h3>
     </div>
     <div class="details" >
         <div>
@@ -337,6 +361,43 @@
     </div>
     <img class="doc-img" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--005.jpg" alt="Hospital">
     </div>
+    <div class="container" >
+        <div>
+            <div class="new-add">
+                <h3 class="add color-blue">Duke Sanson</h3>
+            </div>
+            <div class="details" >
+            <div>
+            <div class="icons" >
+                <i class="fa fa-user icon-image aria-hidden="true"></i>
+                <span class="icon-p" >K</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-user-circle-o icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >K</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-clock-o icon-image"  aria-hidden="true"></i>
+                <span class="icon-p" >Years of Experience</span>
+            </div>
+            </div>
+            <div>
+            <div class="icons" >
+                <i class="fa fa-briefcase icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >job</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-map-marker icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >Greater Noida</span>
+            </div>
+            </div>
+            </div>
+            <div class = "call-now" >
+                <button class="call-btn" >Book Appointment</button> 
+            </div>
+            </div>
+        <img class="doc-img" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--002.jpg" alt="Hospital">
+    </div>
     </div>
     </div>
     <div id = "need-help">
@@ -347,34 +408,16 @@
         <button class="btn-last">Submit your query</button>
     </div>
 
-    <div id = "last-block">
-        <img class="image-01" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png">
-        <div>
-        <h4 class="white-h4">TVASTRA</h4>
-        <span class="last-block-p">Doctor</span>
-        <span class="last-block-p">Hospitals</span>
-        <span class="last-block-p">Treatment</span>
-        <span class="last-block-p">Other services</span>
-        <p class="last-block-p">FAQs</p>
-        <h4 class="white-h4">FOLLOW US</h4>
-        <span class="last-block-p">FAcebook</span>
-        <span class="last-block-p">pinterest</span>
-        <span class="last-block-p">Twitter</span>
-        <span class="last-block-p">Google</span>
-        <span class="last-block-p">Instagram</span>
-        <p id = "last-footer1">All rights reserved tvastra 2018</p>
-        </div>
-    </div>
-    <div class="very-last" >
-        <div>
-            <div id = "footer">
-                <span class="footer-content">Doctors</span>
-                <span class="footer-content">Hospitals</span>
-                <span class="footer-content">Treatments</span>
-                <span class="footer-content">Other Services</span>
-                <span class="footer-content">FAQs</span>
-            </div>
+    <footer class="very-last" >
+        <div class="corner-last">
         <img id="last-image" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png">
+        <div id = "footer">
+            <span class="footer-content">Doctors</span>
+            <span class="footer-content">Hospitals</span>
+            <span class="footer-content">Treatments</span>
+            <span class="footer-content">Other Services</span>
+            <span class="footer-content">FAQs</span>
+        </div>
         </div>
         <div id = "last-footer">
             <div>
@@ -388,6 +431,7 @@
                 <i class="fa fa-instagram icon-size" aria-hidden="true"></i>
             </div>
         </div>
-    </div>
+    </footer>
+
 </body>
 </html>
