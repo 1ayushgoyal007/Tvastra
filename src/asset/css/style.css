@@ -130,6 +130,7 @@ border-style: none;
 .blue-btn{
     font-weight: bolder;
 }
+
 #anime-img{
     width:400px;
     height:400px;
@@ -256,12 +257,6 @@ border-style: none;
     background-color: rgba(128,128,128,0.2);
 
 }
-/* #service-icon1{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 40px 0;
-} */
 #service-icon1{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -586,7 +581,7 @@ and (max-device-width : 1023px) {
     .nav-bar > label{
         display: none;
     }
-    .nav-bar > ul{
+    .nav-bar > .contents{
         display: block;
         display: flex;
         line-height: 50px;
@@ -740,7 +735,6 @@ and (max-device-width : 1023px) {
         padding-bottom: 40px;
     }
     #footer{
-        margin-left:60px;   
         font-weight: bolder;
     }
     .footer-content{
@@ -754,7 +748,7 @@ and (max-device-width : 1023px) {
         margin-right:70px;
     }
     #last-footer{
-        margin: 0 0 0 50px;
+        margin: 0 ;
         padding-bottom:30px;
     }
 

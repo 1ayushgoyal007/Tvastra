@@ -162,7 +162,7 @@ padding: 10px 20px;
     margin-top: auto;
 }
 .call-btn{
-    margin:40px;
+    margin:20px;
     background-color: #152238;
     color:white;
     border:1px solid #152238;
@@ -280,6 +280,9 @@ padding: 10px 20px;
          height:435px;
          object-fit: cover;
      }  
+     .call-btn{
+         margin: 40px;
+     }
      .Hospital-features{
          display: flex;
          justify-content: flex-start;
@@ -361,6 +364,7 @@ padding: 10px 20px;
     .show-more{
         color: skyblue;
         padding: 10px 0;
+        font-size: 1.2em;
     }
     .sidebar{
         padding-left: 20px;
@@ -373,8 +377,11 @@ padding: 10px 20px;
         height:425px;
         object-fit: cover;
     }
+    .buttons{
+        padding-right: 15px;
+    }
     .btns{
-        font-size:0.90em;
+        font-size:0.88em;
         padding:10px 8px;
     }
     .check-box > div{
@@ -428,6 +435,7 @@ padding: 10px 20px;
     }
     .footer-content{
         padding-right: 25px;
+        padding-left: 0;
     }
     .very-last{
         padding:20px 40px;

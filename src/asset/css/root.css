@@ -46,7 +46,7 @@ label{
     font-size:1em;
     margin:0 20px;
     letter-spacing: 1px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 0.9;
 }
 a{
@@ -62,7 +62,7 @@ a{
     flex-direction: row;
     justify-content: space-between;
 }
-.nav-bar > ul{
+.nav-bar > .contents{
     display: block;
     display: flex;
 }
@@ -83,7 +83,7 @@ a{
 #sign-one{
     display: block;
 }
-ul{
+.contents{
     display: none;
 }
 #res-menu:checked ~ label #sign-one{
@@ -93,7 +93,7 @@ ul{
 #res-menu:checked ~ label #sign-two{
     display: block;
 }
-#res-menu:checked ~ ul{
+#res-menu:checked ~ .contents{
     display: block;
 }
 .menu-1{
@@ -102,6 +102,7 @@ ul{
 .image-01{
     height:50%;
     width: 40%;
+
     max-width:250px;
     max-height: 40px;
     padding:15px;
@@ -136,6 +137,7 @@ ul{
     padding: 5px;
     margin:0;
 }
+
 @media only screen and (max-device-width:767px){
     .very-last{
         background-color: #021423;
@@ -145,6 +147,7 @@ ul{
         padding: 20px ;
         align-items: center;
     }
+
     #footer{
         display: flex;
         flex-direction: column;
@@ -176,7 +179,6 @@ ul{
     #last-image{
         margin:0;
         padding: 20px;
-        height: 20%;
         width: 150px;
         text-align: center;
     }
@@ -185,7 +187,7 @@ ul{
 .btni{
     display: none;
 }
-.nav-bar > ul{
+.nav-bar > .contents{
     display: none;
 }
 }
@@ -228,7 +230,18 @@ ul{
         height:80px;
         width:200px;
     }
-    ul{
+    .nav-bar > label{
+        display: none;
+    }
+    .nav-bar > .contents{
+        display: block;
+        display: flex;
+        line-height: 50px;
+    }
+    .nav-bar > .btni{
+        margin:20px 70px 20px 0;
+    }
+    .contents{
         display: block;
     }
     #sign-one{
@@ -239,5 +252,45 @@ ul{
     }
     .temp{
         display: none;
+    }
+    #last-image{
+        padding-right: 70px;
+    }
+    .corner{
+    padding-right: 70px;
+    }
+    #footer{
+        padding-left: 50px;
+    }
+    #last-footer > div > p{
+        margin-left: 70px;
+    }
+    #last-image{
+        height: 40px;
+        padding: 10px 20px;
+    }
+    .footer1{
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 0;
+        justify-content: space-between;
+        line-height: 3.5;
+    }
+    #last-footer{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+    #last-footer > div > p{
+        font-weight: bolder;
+    }
+    .footer-content{
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+        font-weight: bolder;
+    }
+    .corner{
+        padding-right: 20px;
     }
 }
