@@ -12,6 +12,21 @@ window.onload  = function(){
     }
 }
 
+function showUl(){
+    var content = document.querySelector('.ul-list');
+    console.log(content.style.display);
+    if(content.style.display == 'none'){
+        content.style.display = 'block';
+    }
+    else{
+        content.style.display = 'none';
+    }
+
+
+
+}
+
+
 function Display(str,btnn,sps){
     var temps = ["pImg1","pImg2","pImg3","pImg4","pImg5","pImg6","pImg7"];
     var btns = ["p-btn1","p-btn2","p-btn3","p-btn4","p-btn5","p-btn6","p-btn7"];

@@ -57,52 +57,34 @@ a{
     font-weight: bolder;
     font-size: 0.95em;
 }
-.nav-bar{
+
+
+.nav-bar > .image-ico{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+
 }
-.nav-bar > .contents{
-    display: block;
-    display: flex;
-}
-#res-menu{
-    display: none;
-}
-#sign-two{
-    font-size: 20px;
-    line-height: 60px;
-    cursor: pointer;
-    display: none;
-}
-#sign-one{
+#sign{
     font-size:20px;
     line-height: 60px;
+    padding-right: 20px;
     cursor: pointer;
 }
-#sign-one{
-    display: block;
-}
-.contents{
+.ul-list{
+    text-align: center;
+    border-top: 2px solid rgba(128,128,128,0.5);
     display: none;
 }
-#res-menu:checked ~ label #sign-one{
-    display: none;
+.contents > li {
+    border-bottom: 2px solid rgba(128,128,128,0.5);
+}
 
-    }
-#res-menu:checked ~ label #sign-two{
-    display: block;
-}
-#res-menu:checked ~ .contents{
-    display: block;
-}
-.menu-1{
-    display: flex;
+.btns{
+    display: none;
 }
 .image-01{
     height:50%;
     width: 40%;
-
     max-width:250px;
     max-height: 40px;
     padding:15px;
@@ -139,6 +121,9 @@ a{
 }
 
 @media only screen and (max-device-width:767px){
+    
+
+
     .very-last{
         background-color: #021423;
         display: flex;
@@ -183,13 +168,21 @@ a{
         text-align: center;
     }
 }
+
+@media only screen and (min-device-width:767px){
+    #sign-one{
+        padding-right: 15px;
+    }
+    #sign{
+        padding-right: 30px;
+    }
+}
+
 @media only screen and (max-device-width:1023px){
 .btni{
     display: none;
 }
-.nav-bar > .contents{
-    display: none;
-}
+
 }
 @media only screen and (min-device-width:1023px){
     h1{
@@ -215,41 +208,45 @@ a{
         line-height: 5;
         font-family: Light;
     }
+    .nav-bar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btns{
+        display: block;
+        line-height: 5;
+        padding-right: 70px;
+    }
+    .ul-list{
+        display: block;
+        border: unset;
+        
+    }
+    #sign{
+        display: none;
+    }
+
+
     .btn-first{
         height: 47px;
         width: 130px;
     }
-    .btni{
-        display: "";
-    }
     .image-01{
         padding:20px 70px;
-        width:70%;
+        width:100%;
     }
-    .nav-bar > .imagei{
+    .imageii{
         height:80px;
         width:200px;
     }
-    .nav-bar > label{
-        display: none;
-    }
-    .nav-bar > .contents{
-        display: block;
-        display: flex;
-        line-height: 50px;
-    }
-    .nav-bar > .btni{
-        margin:20px 70px 20px 0;
-    }
     .contents{
-        display: block;
+        display: flex;
     }
-    #sign-one{
-        display: none;
+    .contents > li{
+        border: unset;
     }
-    .nav-bar> .btni{
-        margin:20px 70px 20px 0;
-    }
+
     .temp{
         display: none;
     }

@@ -1,0 +1,179 @@
+.hero{
+    background: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/contactUs.png);
+    background-size:  cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 80px 0;
+}
+.hero > h2{
+    padding: 0;
+    padding-bottom: 20px;
+    font-size: 1.8em;
+}
+.hero > h4{
+    font-family: Light;
+    font-size: 1.2em;
+
+}
+#map{
+    height: 300px;
+    width: 100%;
+}
+
+.contain-map{
+    padding: 20px;
+}
+.contact-h4{
+    font-size: 1em;
+}
+.icons{
+    padding: 10px;
+    color: #2c81c2;
+}
+.contacts{
+    margin: 15px;
+}
+.tvastra-details {
+    display: flex;
+    padding: 10px 0;
+    line-height: 1.5;
+}
+.details > span{
+    margin:0;
+    font-size: 0.8em;
+    line-height: 2.4;
+}
+.input-btn{
+    background-color: #9cbfda;
+    padding: 20px 0;
+}
+.inputII > div{
+    display: flex;
+    flex-direction: column;
+}
+.input-field{
+    margin: 0 20px;
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 5px 20px;
+    font-size: 0.75em;
+    font-family: Dark;
+    color: rgba(128, 128, 128, 0.1);
+    border: 1px solid white;
+    border-radius: 1px;
+}
+.btn-div{
+    margin-left: auto;
+    width: 150px;
+    margin-right: 20px;
+}
+.msg-btn{
+    width: 150px;
+    height: 40px;
+    background-color: #2c81c2;
+    border-radius: 1px;
+    color: white;
+    border: 1px solid #9cbfda;
+    font-size: 0.9em;
+    font-family: Dark;
+}
+#last-image{
+    height: unset;
+}
+@media only screen and (min-device-width:767px){
+    .contacts{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 25px;
+    }
+
+    .inputII{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .textarea1{
+        height: 140px;
+    }
+    .btn-div{
+        margin-right: 0;
+    }
+    .input-field{
+        margin-left:0 ;
+        margin-right: 0;
+    }
+    .input-btn{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    #last-image{
+        height: 40px;
+        padding: 10px 20px;
+    }
+    .footer1{
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 0;
+        justify-content: space-between;
+        line-height: 3.5;
+    }
+    #last-footer{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+    #last-footer > div > p{
+        font-weight: bolder;
+    }
+    .footer-content{
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+        font-weight: bolder;
+    }
+    .corner{
+        padding-right: 20px;
+    }
+
+}
+@media only screen and (min-device-width:1023px){
+    .contacts{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-main{
+        display: grid;
+        margin: 40px 70px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    .contain-map{
+        padding: 20px 70px;
+    }
+    .icons{
+        padding-left: 0;
+    }
+    .contacts{
+        grid-column: 1/2;
+    }
+    .input-btn{
+        grid-column: 2/4;
+    }
+    footer{
+        border-top: 1px solid gray;
+    }
+    #last-image{
+        padding-right: 70px;
+    }
+    .corner{
+    padding-right: 70px;
+    }
+    #footer{
+        padding-left: 50px;
+    }
+    #last-footer > div > p{
+        margin-left: 70px;
+    }
+}
