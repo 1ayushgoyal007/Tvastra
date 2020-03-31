@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Doctor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/doctor.css">
+</head>
+<body> 
+
+    
+    <nav class="nav-bar" >
+        <div class="image-ico" >
+        <div class="imageii" >
+            <a href="index" ><img class= "image-01" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png"></a>
+        </div>
+        <div class="bar-icon" >
+            <i  onclick="showUl()" class="fa fa-bars"  id = "sign"></i>
+        </div>
+        </div>
+        <div class="ul-list" >
+            <ul class="contents" >
+                <li><a href="doctor">Doctor</a></li>
+                <li><a href="hospital">Hospital</a></li>
+                <li><a href="treatment">Treatment</a></li>
+                <li><a href="contact-us">Other Services</a></li>
+                <li><a href="about">About</a></li>
+            </ul>
+        </div>
+        <div class="top-btns" >  
+            <button onclick="location.href = 'login';" id="btn1" >Login / Signup</button>
+            <button id = "btn2" >Get a Qoute</button>
+
+        </div>
+    </nav>
+
+
+
+    <div class="hero" >
+        <h1>Cardiac Surgeons in <a href="#" >Delhi</a></h1>
+    </div>
+
+
+
+    
+
+    <div class="drop-down">
+        <h2>Home/Doctor List</h2>
+        <select class="Drp-down">
+            <option  >Sort by</option>
+            <option >doctor</option>
+        </select>
+    </div>
+
+
+    <div class="main" >
+    <div class="side-flex" >
+        <div class="filter">
+            <h5 class="filter-h5" >Filter by</h5>
+            <div class="buttons" >
+                <button class="btns">DLF cyber City<i class="fa fa-times inside-btn"></i></button>
+                <button class="btns" >Multi Organ Transplant<i class="fa fa-times inside-btn"></i></button>
+                <button class="btns" >Apollo Hospital<i class="fa fa-times inside-btn"></i></button>
+                <button class="btns" >30+<i class="fa fa-times inside-btn"></i></button>
+            </div>
+        </div>
+        <div class="applied-filters" >
+        <div class="sidebar">
+            <div class="check" >
+            <h4>Location</h4>
+            <i class="fa fa-search icon-image" aria-hidden="true"></i>
+
+            <i class="fa fa-minus icon-image aria-hidden="true"></i>
+            </div>
+            
+            <div class="check-box" >
+                <div class="last-flex" > 
+                <input class="imcheck-box" type="checkbox">
+                <label>DLF Cyber City</label>
+                </div >
+                <div class="last-flex">
+                <input class="imcheck-box" type="checkbox">
+                <label>Dwarka</label>
+                </div>
+                <div class="last-flex">
+                <input class="imcheck-box" type="checkbox">
+                <label>Lajpat Nagar</label>
+                </div>
+                <div class="last-flex">
+                <input class="imcheck-box" type="checkbox">
+                <label>Palam Vihar</label>
+                </div>
+                <div class="last-flex">
+                <input class="imcheck-box" type="checkbox">
+                <label>Punjabi Bagh</label>
+                </div>
+                <div class="last-flex">
+                <input class="imcheck-box" type="checkbox">
+                <label>Push Road</label>
+                </div>
+    
+            </div>
+            <h4 class="show-more" >+ Show More</h4>
+            <hr/>
+          </div>
+          <div class="sidebar">
+            <div class="check" >
+                <h4>Treatments</h4>
+            <i class="fa fa-search icon-image" aria-hidden="true"></i>
+            <i class="fa fa-minus icon-image" aria-hidden="true"></i>
+
+            </div>
+            <div class="check-box" >
+                <div class="last-flex">
+                <input  type="checkbox">
+                <label>Multi Organ TransPlant</label>
+                </div>
+                <div class="last-flex">
+                <input type="checkbox">
+                <label>Orthopedic Surgery</label>
+                </div>
+                <div class="last-flex">
+                <input  type="checkbox">
+                <label>Infertility Treatmnet</label>
+                </div>
+                <div class="last-flex">
+                <input  type="checkbox">
+                <label>Cardiology</label>
+                </div>
+                <div class="last-flex">
+                <input  type="checkbox">
+                <label>Dentistry</label>
+                </div>
+                <div class="last-flex">
+                <input  type="checkbox">
+                <label>Cancer</label>
+                </div>
+    
+            </div>
+            <h4 class="show-more" >+ Show More</h4>
+            <hr/>
+          </div>
+          <div class="sidebar">
+            <div class="check" >
+                <h4>Hospitals</h4>
+                <i class="fa fa-search icon-image" aria-hidden="true"></i>
+                <i class="fa fa-minus icon-image aria-hidden="true"></i>
+
+                </div >
+                <div class="check-box" >
+                    <div class="last-flex">
+                    <input  type="checkbox">
+                    <label>Apollo Hospital</label>
+                    </div>
+                    <div class="last-flex">
+                    <input  type="checkbox">
+                    <label>North Side Hospital</label>
+                    </div>
+                    <div class="last-flex">
+                    <input  type="checkbox">
+                    <label>BorthStar</label>
+                    </div >
+                    <div class="last-flex">
+                    <input  type="checkbox">
+                    <label>Aiims</label>
+                    </div>
+                    <div class="last-flex">
+                    <input  type="checkbox">
+                    <label>Biims</label>
+                    </div>
+                    <div class="last-flex">
+                    <input  type="checkbox">
+                    <label>Ciims</label>
+                    </div>
+                </div>
+                <h4 class="show-more" >+ Show More</h4>
+                <hr/>
+          </div>
+          <div class="sidebar">
+            <div class="check" >
+                <h4>Years of Experience</h4>
+                <i class="fa fa-search icon-image" aria-hidden="true"></i>
+                <i class="fa fa-minus icon-image aria-hidden="true"></i>
+
+            </div>
+            <div class="check-box" >
+                <div class="last-flex" >
+                <input  type="checkbox">
+                <label>30+</label>
+                </div>
+                <div class="last-flex">
+                <input  type="checkbox">
+                <label>40+</label>
+                </div>
+                <div class="last-flex">
+                <input  type="checkbox">
+                <label>50+</label>
+                </div>
+                <div class="last-flex">
+                <input  type="checkbox">
+                <label>60+</label>
+                </div>
+                <div class="last-flex">
+                <input type="checkbox">
+                <label>70+</label>
+                </div>
+                <div class="last-flex">
+                <input type="checkbox">
+                <label>80+</label>
+                </div>
+            </div>
+            <h4 class="show-more" >+ Show More</h4>
+          </div>
+          </div>
+        </div>
+    <div >
+    <div class="container" >
+        <div>
+            <a href="doc-profile" ><div class="new-add">
+                <h3 class="add color-blue">Duke Sanson</h3>
+            </div></a>
+            <div class="details" >
+            <div>
+            <div class="icons" >
+                <i class="fa fa-user icon-image aria-hidden="true"></i>
+                <span class="icon-p" >K</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-user-circle-o icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >K</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-clock-o icon-image"  aria-hidden="true"></i>
+                <span class="icon-p" >Years of Experience</span>
+            </div>
+            </div>
+            <div>
+            <div class="icons" >
+                <i class="fa fa-briefcase icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >job</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-map-marker icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >Greater Noida</span>
+            </div>
+            </div>
+            </div>
+            <div class = "call-now" >
+                <a href="book-appointment" ><button class="call-btn" >Book Appointment</button></a> 
+            </div>
+            </div>
+        <img class="doc-img" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--002.jpg" alt="Hospital">
+    </div>
+ <div class="container" >
+    <div>
+        <a  href="doc-profile"><div class="new-add">
+            <h3 class="add color-blue">Shubham</h3>
+        </div></a>
+        <div class="details" >
+            <div>
+            <div class="icons" >
+                <i class="fa fa-user icon-image aria-hidden="true"></i>
+                <span class="icon-p" >K</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-user-circle-o icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >K</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-clock-o icon-image"  aria-hidden="true"></i>
+                <span class="icon-p" >Years of Experience</span>
+            </div>
+            </div>
+            <div>
+            <div class="icons" >
+                <i class="fa fa-briefcase icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >job</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-map-marker icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >Greater Noida</span>
+            </div>
+            </div>
+            </div>
+                    <div class = "call-now" >
+            <a href="book-appointment" ><button class="call-btn" >Book Appointment</button></a> 
+        </div>
+        </div>
+    <img class="doc-img" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--003.jpg" alt="Hospital">
+</div>
+<div class="container" >
+    <div>
+        <a href="doc-profile" ><div class="new-add">
+            <h3 class="add color-blue">Prakhar</h3>
+        </div></a>
+        <div class="details" >
+            <div>
+            <div class="icons" >
+                <i class="fa fa-user icon-image aria-hidden="true"></i>
+                <span class="icon-p" >K</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-user-circle-o icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >K</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-clock-o icon-image"  aria-hidden="true"></i>
+                <span class="icon-p" >Years of Experience</span>
+            </div>
+            </div>
+            <div>
+            <div class="icons" >
+                <i class="fa fa-briefcase icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >job</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-map-marker icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >Greater Noida</span>
+            </div>
+            </div>
+            </div>
+        <div class = "call-now" >
+            <a href="book-appointment" ><button class="call-btn" >Book Appointment</button></a> 
+        </div>
+        </div>
+    <img class="doc-img" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--004.jpg" alt="Hospital">
+</div>
+<div class="container" >
+    <div>
+
+    <a href="doc-profile" ><div class="new-add">
+        <h3 class="add color-blue">Deepak</h3>
+    </div></a>
+    <div class="details" >
+        <div>
+        <div class="icons" >
+            <i class="fa fa-user icon-image aria-hidden="true"></i>
+            <span class="icon-p" >K</span>
+        </div>
+        <div class="icons" >
+            <i class="fa fa-user-circle-o icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >K</span>
+        </div>
+        <div class="icons" >
+            <i class="fa fa-clock-o icon-image"  aria-hidden="true"></i>
+            <span class="icon-p" >Years of Experience</span>
+        </div>
+        </div>
+        <div>
+        <div class="icons" >
+            <i class="fa fa-briefcase icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >job</span>
+        </div>
+        <div class="icons" >
+            <i class="fa fa-map-marker icon-image" aria-hidden="true"></i>
+            <span class="icon-p" >Greater Noida</span>
+        </div>
+        </div>
+        </div>    <div class = "call-now" >
+            <a href="book-appointment" ><button class="call-btn" >Book Appointment</button></a> 
+    </div>
+    </div>
+    <img class="doc-img" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--005.jpg" alt="Hospital">
+    </div>
+    <div class="container" >
+        <div>
+            <a href="doc-profile"><div class="new-add">
+                <h3 class="add color-blue">Duke Sanson</h3>
+            </div></a>
+            <div class="details" >
+            <div>
+            <div class="icons" >
+                <i class="fa fa-user icon-image aria-hidden="true"></i>
+                <span class="icon-p" >K</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-user-circle-o icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >K</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-clock-o icon-image"  aria-hidden="true"></i>
+                <span class="icon-p" >Years of Experience</span>
+            </div>
+            </div>
+            <div>
+            <div class="icons" >
+                <i class="fa fa-briefcase icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >job</span>
+            </div>
+            <div class="icons" >
+                <i class="fa fa-map-marker icon-image" aria-hidden="true"></i>
+                <span class="icon-p" >Greater Noida</span>
+            </div>
+            </div>
+            </div>
+            <div class = "call-now" >
+                <a href="book-appointment" ><button class="call-btn" >Book Appointment</button></a> 
+            </div>
+            </div>
+        <img class="doc-img" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--002.jpg" alt="Hospital">
+    </div>
+    </div>
+    </div>
+    <div id = "need-help">
+        <div>
+        <h2 id=  "white-h2">Need Help?</h2>
+        <p id = "need-help-p">just let us know.we will be happy to assist you.</p>
+        </div>
+        <button class="btn-last">Submit your query</button>
+    </div>
+
+    <footer class="very-last" >
+        <div class="corner-last">
+        <img id="last-image" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png">
+        <div id = "footer">
+            <span class="footer-content"><a href="doctor" >Doctors</a></span>
+            <span class="footer-content"><a href="hospital" >Hospitals</a></span>
+            <span class="footer-content"><a href="treatment" >Treatments</a></span>
+            <span class="footer-content"><a href="contact-us" >Contact Us</a></span>
+            <span class="footer-content" ><a href="FAQ" >FAQs</a></span>
+        </div>
+        </div>
+        <div id = "last-footer">
+            <div>
+            <p>All Rights Reserved. tvastra 2018</p>
+            </div>
+            <div class="corner" >
+                <i class="fa fa-facebook-official icon-size" aria-hidden="true"></i>
+                <i class="fa fa-pinterest-p icon-size" aria-hidden="true"></i>
+                <i class="fa fa-google icon-size" aria-hidden="true"></i>
+                <i class="fa fa-twitter icon-size" aria-hidden="true"></i>
+                <i class="fa fa-instagram icon-size" aria-hidden="true"></i>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/script/script.js"></script>
+
+
+
+
+</body>
+</html>

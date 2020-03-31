@@ -1,0 +1,253 @@
+
+.hero{
+    background: url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/contactUs.png");
+    background-size:  cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero > h2{
+    padding: 0;
+    color: white;
+    font-size: 1.65em;   
+}
+ 
+.hero > h4{
+    padding: 0;
+    padding-top: 20px;
+    color: white;
+    font-family: Light;
+    font-size: 1em;
+}
+.profile{
+    margin: 10px;
+    border: 1px solid gray;
+}
+.profile-img{
+    margin: 10px;
+}
+
+.image-profile{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.appoint-btn{
+    width: 100%;
+    margin: 10px 0;
+    height: 40px;
+    background-color: #152238;
+    color: white;
+    font-family: Dark;
+    border: 2px solid #152238;
+    border-radius: 3px;
+}
+
+.color-blue{
+    padding-left: 50px;
+    color: #4797d4;
+    font-size:1.75em
+}
+.doc-details::before{
+    display: block;
+    content: "";
+    border-top: .1rem solid #4797d4;
+    width: 3rem;
+    transform: translateY(2rem);
+    margin:0;
+}
+
+.doc-details > p{
+    margin: 15px;
+    padding: 0;
+    text-align: center;
+}
+.doc-details{
+    border-bottom: 1px dashed gray;
+
+}
+.doc-feature{
+    margin: 10px;
+}
+.doc-feature > p{
+    margin: 0;
+    background-color: #dbe9f3;
+    padding:5px;
+}
+.each-feature{
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px dashed gray;
+    color: #4797d4;
+    justify-content: space-between;
+
+}
+/* .fa-arrow-circle-up{
+    cursor: pointer;
+} */
+#only-hide{
+    display: block;
+}
+.fa-arrow-circle-up{
+    display: none;
+}
+.fa-arrow-circle-down{
+    display: block;
+}
+#only-show{
+    display: none;
+}
+.show-p{
+    display: none;
+}
+#show-p1{
+    display: block;
+}
+.each-feature > div{
+    display: flex;
+}
+.each-feature >div> h3{
+    padding: 0;
+    line-height: 0.8;
+    padding-left: 20px;
+    font-size: 1.15em;
+}
+.need-help{
+    background-color: #8fcaf1;
+    text-align: center;
+    padding:30px;
+}
+.need-help >div> h2{
+    padding:0;
+    font-size: 1.7em;
+    color: white;
+}
+.need-help > div > p{
+    padding: 15px 0;
+}
+.help-btn{
+    background-color: #0099ff;
+    color: white;
+    border:2px solid #0099ff;
+    border-radius: 5px;
+    padding: 15px 25px;
+}
+
+@media only screen and (min-device-width:767px)
+and (max-device-width:1023px){
+    .footer1{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    #last-image{
+        width: 150px;
+        padding: 10px 20px;
+    }
+    #last-footer{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+    #last-footer > div > p{
+        font-weight: bolder;
+
+    }
+    .footer-content{
+        font-weight: bold;
+        margin: 0;
+        padding-left: 20px;
+        line-height: 3.3;
+    }
+    .corner{
+        padding-right: 20px;
+    }
+    .profile{
+        margin: 20px;
+    }
+}
+@media only screen and (min-device-width:767px){
+    .profile{
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+    .image-profile{
+        width: 100%;
+        width: 220px;
+        height: 250px;
+    }
+.doc-details::before{
+    width: 1.2rem;
+}
+.color-blue{
+    padding-left: 20px;
+}
+.doc-details > p{
+    text-align: left;
+    margin-left: 20px;
+}
+.doc-details{
+    border: none;
+}
+.doc-feature{
+    margin-left: 20px;
+}
+#diff-feature{
+    border-top: 1px dashed gray;
+}
+.doc-feature > p{
+    line-height: 1.6;
+    padding: 5px 10px;
+}
+}
+
+@media only screen and (min-device-width:1023px){
+    .hero{
+        text-align: left;
+        padding: 100px 70px;
+    }
+    .hero > h2{
+        font-size: 1.8em;
+    }
+    .hero > h4{
+        font-size: 1.1em;
+        font-family: Light;
+    }
+    .image-profile{
+        width: 260px;
+    }
+    .profile{
+        margin: 70px;
+    }
+
+    .need-help{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 70px;
+    }
+    .need-help > div > h2{
+        text-align: left;
+        font-size: 1.8em;
+    }
+    .need-help > div > p{
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+    }
+    .help-btn{
+        height: 64px;
+        width: 240px;
+        font-size: 1.1em;
+    }
+
+
+    #last-image{
+        padding-right: 70px;
+    }
+    .corner{
+        padding-right: 70px;
+    }
+}

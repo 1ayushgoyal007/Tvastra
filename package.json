@@ -1,7 +1,7 @@
 {
-  "name": "css",
+  "name": "main",
   "version": "1.0.0",
-  "description": "## This is the wiki file to read about the tasks",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,9 @@
     "url": "git@workspace.konfinity.com:html-css/css.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
 }
