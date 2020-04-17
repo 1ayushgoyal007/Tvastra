@@ -29,6 +29,9 @@
         .contain-err{
             text-align: center;
         }
+        .dropdown{
+            padding: 16px 10px;
+        }
     </style>
 </head>
 <body>
@@ -44,19 +47,35 @@
         </div>
         <div class="ul-list" >
             <ul class="contents" >
-                <li><a href="doctor">Doctor</a></li>
-                <li><a href="hospital">Hospital</a></li>
-                <li><a href="treatment">Treatment</a></li>
-                <li><a href="contact-us">Contact Us</a></li>
-                <li><a href="about">About</a></li>
+                <li><a href="/doctor">Doctor</a></li>
+                <li><a href="/hospital">Hospital</a></li>
+                <li class="dropdown" >
+                    <a href="/treatment">Treatment</a>
+                    <ul class="dropdown-content" >
+                        <li><a href="/">Cancer</a></li>
+                        <li><a href="/">Dentistry</a></li>
+                        <li><a href="/">CardioPedics Surgery</a></li>
+                        <li><a href="/">Cardiology Treatment</a></li>
+                        <li><a href="/">Infertility Specialist</a></li>
+                        <li><a href="/">Cancer</a></li>
+                    </ul>
+                </li>
+                <li class="/contact-us" ><a href="/contact-us">Contact Us</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
         </div>
         <div class="top-btns" >  
-            <button id="btn1" >Login / Signup</button>
-            <button onclick="location.href = 'login';" id = "btn2" >Get a Qoute</button>
+        <%    if(!currentUser){  %>
+            <button onclick="location.href = '/login';" id="btn1" >Login / Signup</button>
+        <%    }else{             %>
+            <button onclick="location.href = '/logout';" id="btn1" >Logout</button>
+        <%    }    %>
+            <button onclick="location.href = '/tvastra-plus';" id = "btn2" >Get a Qoute</button>
 
         </div>
     </nav>
+
+
     <div class="contain-err" >
     <h1 class="error" >404, Not Found!</h1>
     <a href="index" ><button class="home-btn" >Go Home</button></a>

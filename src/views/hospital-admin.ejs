@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Hospital</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/root.css">
+
+    <style>
+        body{
+            font-family: Light;
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            margin: 10px 30%;
+        }
+        input{
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        button{
+            height: 45px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hospital-Admin</h1>
+    <form action="/hospital" method="POST">
+        <input type="text" name="name" placeholder="name" >
+        <input type="text" name="image" placeholder="image">
+        <input type="text" name="specialization" placeholder="specialization">
+        <input type="text" name="treatments" placeholder="treatments" >
+        <input type="text" name="doctors" placeholder="doctors" >
+        <input type="text" name="address" placeholder="address">
+        <input type="text" name="beds" placeholder="beds">
+        <input type="text" name="fees" placeholder="fees">
+        <input type="text" name="infrastructure" placeholder="infrastructure">
+        <button>Submit!</button>
+    </form>
+    
+</body>
+</html>

@@ -50,7 +50,6 @@
 .color-blue{
     padding-left: 30px;
     color: #4797d4;
-    font-size: 1.75em;
 }
 .hospital-icons{
     padding: 15px;
@@ -102,6 +101,8 @@
     display: none;
 }
 .show-p{
+    padding: 15px;
+    font-weight: 700;
     display: none;
 }
 #show-p1{

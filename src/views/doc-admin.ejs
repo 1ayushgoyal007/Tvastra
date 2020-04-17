@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doc-admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/root.css">
+    <style>
+        body{
+            font-family: Light;
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            margin: 10px 30%;
+        }
+        input{
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        button{
+            height: 45px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Doc Admin</h1>
+    <form action="/doctor" method="POST">
+        <input type="text" name="name" placeholder="doctor-name">
+        <input type="text" name="image" placeholder="image-url">
+        <input type="text" name="specialization" placeholder="specialization">
+        <input type="text" name="treatments" placeholder="Treatments">
+        <input type="text" name="experience" placeholder="work experience">
+        <input type="text" name="qualification" placeholder="Qualification">
+        <input type="text" name="awards" placeholder="Awards">
+        <input type="text" name="location" placeholder="location">
+        <input type="text" name="fees" placeholder="Avg-fees">
+        <button>Submit</button>
+    </form>
+</body>
+</html>

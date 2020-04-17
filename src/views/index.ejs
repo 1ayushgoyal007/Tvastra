@@ -36,17 +36,31 @@
             </div>
             <div class="ul-list" >
                 <ul class="contents" >
-                    <li><a href="doctor">Doctor</a></li>
-                    <li><a href="hospital">Hospital</a></li>
-                    <li><a href="treatment">Treatment</a></li>
-                    <li><a href="contact-us">Contact Us</a></li>
-                    <li><a href="about">About</a></li>
+                    <li><a href="/doctor">Doctor</a></li>
+                    <li><a href="/hospital">Hospital</a></li>
+                    <li class="dropdown" >
+                        <a href="/treatment">Treatment</a>
+                        <ul class="dropdown-content" >
+                            <li><a href="/">Cancer</a></li>
+                            <li><a href="/">Dentistry</a></li>
+                            <li><a href="/">CardioPedics Surgery</a></li>
+                            <li><a href="/">Cardiology Treatment</a></li>
+                            <li><a href="/">Infertility Specialist</a></li>
+                            <li><a href="/">Cancer</a></li>
+                        </ul>
+                    </li>
+                    <li class="/contact-us" ><a href="/contact-us">Contact Us</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
             </div>
             <div class="top-btns" >  
-                <button onclick="location.href = 'login';" id="btn1" >Login / Signup</button>
-                <button id = "btn2" >Get a Qoute</button>
-
+            <%    if(!currentUser){  %>
+                <button onclick="location.href = '/login';" id="btn1" >Login / Signup</button>
+            <%    }else{             %>
+                <button onclick="location.href = '/logout';" id="btn1" >Logout</button>
+            <%    }    %>
+                <button onclick="location.href = '/tvastra-plus';" id = "btn2" >Get a Qoute</button>
+    
             </div>
         </nav>
 
@@ -282,35 +296,37 @@
         <h2 class= "white-h1">Need Help?</h2>
         <p>just let us know.we will be happy to assist you.</p>
         </div>
-        <button class="btn-last">Submit your query</button>
+        <button onclick="location.href = '/submit-your-query';" class="btn-last">Submit your query</button>
     </div>
 
 
 
 
-
-        <footer class="very-last" >
-            <img id="last-image" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png">
-            <div id = "footer">
-                <span class="footer-content"><a href="doctor" >Doctors</a></span>
-                <span class="footer-content"><a href="hospital" >Hospitals</a></span>
-                <span class="footer-content"><a href="treatment" >Treatments</a></span>
-                <span class="footer-content"><a href="contact-us" >Contact Us</a></span>
-                <span class="footer-content" ><a href="FAQ" >FAQs</a></span>
+    <footer class="very-last" >
+        <div class="footer1" >
+        <img id="last-image" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png">
+        <div id = "footer">
+            <span class="footer-content"><a href="doctor" >Doctors</a></span>
+            <span class="footer-content"><a href="hospital" >Hospitals</a></span>
+            <span class="footer-content"><a href="treatment" >Treatments</a></span>
+            <span class="footer-content"><a href="contact-us" >Contact Us</a></span>
+            <span class="footer-content" ><a href="FAQ" >FAQs</a></span>
+        </div>
+        </div>
+        <div id = "last-footer">
+            <div>
+            <p>All Rights Reserved. tvastra 2018</p>
             </div>
-            <div id = "last-footer">
-                <div>
-                <p>All Rights Reserved. tvastra 2018</p>
-                </div>
-                <div class="corner" >
-                    <i class="fa fa-facebook-official icon-size" aria-hidden="true"></i>
-                    <i class="fa fa-pinterest-p icon-size" aria-hidden="true"></i>
-                    <i class="fa fa-google icon-size" aria-hidden="true"></i>
-                    <i class="fa fa-twitter icon-size" aria-hidden="true"></i>
-                    <i class="fa fa-instagram icon-size" aria-hidden="true"></i>
-                </div>
+            <div class="corner" >
+                <i class="fa fa-facebook-official icon-size" aria-hidden="true"></i>
+                <i class="fa fa-pinterest-p icon-size" aria-hidden="true"></i>
+                <i class="fa fa-google icon-size" aria-hidden="true"></i>
+                <i class="fa fa-twitter icon-size" aria-hidden="true"></i>
+                <i class="fa fa-instagram icon-size" aria-hidden="true"></i>
             </div>
-        </footer>
+        </div>
+    </footer>
+    
 
     <script src="/script/script.js"></script>
     </body>

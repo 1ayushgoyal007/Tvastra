@@ -47,7 +47,6 @@
 .color-blue{
     padding-left: 50px;
     color: #4797d4;
-    font-size:1.75em
 }
 .doc-details::before{
     display: block;
@@ -99,6 +98,8 @@
     display: none;
 }
 .show-p{
+    padding: 15px;
+    font-weight: 700;
     display: none;
 }
 #show-p1{
@@ -215,8 +216,11 @@ and (max-device-width:1023px){
         font-size: 1.1em;
         font-family: Light;
     }
+    .profile-img{
+        width: 40%;
+    }
     .image-profile{
-        width: 260px;
+        width: 100%;
     }
     .profile{
         margin: 70px;

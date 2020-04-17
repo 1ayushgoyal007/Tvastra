@@ -13,7 +13,7 @@
     <nav class="nav-bar" >
         <div class="image-ico" >
         <div class="imageii" >
-            <a href="index" ><img class= "image-01" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png"></a>
+            <a href="/index" ><img class= "image-01" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png"></a>
         </div>
         <div class="bar-icon" >
             <i  onclick="showUl()" class="fa fa-bars"  id = "sign"></i>
@@ -21,35 +21,49 @@
         </div>
         <div class="ul-list" >
             <ul class="contents" >
-                <li><a href="doctor">Doctor</a></li>
-                <li><a href="hospital">Hospital</a></li>
-                <li><a href="treatment">Treatment</a></li>
-                <li><a href="contact-us">Contact Us</a></li>
-                <li><a href="about">About</a></li>
+                <li><a href="/doctor">Doctor</a></li>
+                <li><a href="/hospital">Hospital</a></li>
+                <li class="dropdown" >
+                    <a href="/treatment">Treatment</a>
+                    <ul class="dropdown-content" >
+                        <li><a href="/">Cancer</a></li>
+                        <li><a href="/">Dentistry</a></li>
+                        <li><a href="/">CardioPedics Surgery</a></li>
+                        <li><a href="/">Cardiology Treatment</a></li>
+                        <li><a href="/">Infertility Specialist</a></li>
+                        <li><a href="/">Cancer</a></li>
+                    </ul>
+                </li>
+                <li class="/contact-us" ><a href="/contact-us">Contact Us</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
         </div>
         <div class="top-btns" >  
-            <button onclick="location.href = 'login';" id="btn1" >Login / Signup</button>
-            <button id = "btn2" >Get a Qoute</button>
+        <%    if(!currentUser){  %>
+            <button onclick="location.href = '/login';" id="btn1" >Login / Signup</button>
+        <%    }else{             %>
+            <button onclick="location.href = '/logout';" id="btn1" >Logout</button>
+        <%    }    %>
+            <button onclick="location.href = '/tvastra-plus';" id = "btn2" >Get a Qoute</button>
 
         </div>
     </nav>
 
 
     <section class="hero" >
-        <h2>About John Nisson</h2>
+        <h2>About <%= doc.name %></h2>
         <h4>Home / Doctor Profile</h4>
     </section>
 
 
     <section class="profile" >  
         <div class="profile-img" >
-            <img  class="image-profile" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--002.jpg" alt="Profile-image">
+            <img  class="image-profile" src="<%= doc.image %>" alt="Profile-image">
             <button class="appoint-btn" >Book An Appointment</button>
         </div>
         <div class="details" >
             <div class="doc-details">
-                <h1 class="add color-blue">Duke Sanson</h1>
+                <h1 class="add color-blue"><%= doc.name %></h1>
 
                 <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nemo aasi ayush gowt loren sdsqd ayus lioren and you cant do tha tand it.</p>
             </div>
@@ -66,7 +80,9 @@
 
                     </div>
                 </div>
-                <p class="show-p" id="show-p1" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                <p class="show-p" id="show-p1" >
+                    Curing <%= doc.specialization %> is my Speciality.
+                </p>
                 </div>
                 <div>
                     <div class="each-feature" id="diff-feature">
@@ -80,7 +96,9 @@
     
                         </div>
                     </div>
-                    <p class="show-p" id="show-p2" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                    <p class="show-p" id="show-p2" >
+                        Have Performed <%= doc.treatments %>+ Treatments. 
+                    </p>
                 </div>
                 <div>
                     <div class="each-feature" id="diff-feature">
@@ -94,7 +112,9 @@
     
                         </div>
                     </div>
-                    <p class="show-p" id="show-p3" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                    <p class="show-p" id="show-p3" >
+                        <%= doc.experience %>+ Years Of experience.
+                    </p>
                 </div>
                 <div>
                     <div class="each-feature" id="diff-feature">
@@ -108,7 +128,9 @@
     
                         </div>
                     </div>
-                    <p class="show-p" id="show-p4" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                    <p class="show-p" id="show-p4" >
+                        Completed <%= doc.qualification %> in year 2010 from STANFORD University.
+                    </p>
                 </div>
                 <div>
                     <div class="each-feature" id="diff-feature">
@@ -122,7 +144,9 @@
     
                         </div>
                     </div>
-                    <p class="show-p" id="show-p5" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                    <p class="show-p" id="show-p5" >
+                        Won <%= doc.awards %>+ Awards.
+                    </p>
                 </div>
                 <div>
                     <div class="each-feature" id="diff-feature">
@@ -136,7 +160,10 @@
     
                         </div>
                     </div>
-                    <p class="show-p" id="show-p6" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                    <p class="show-p" id="show-p6" >
+                        
+                        <%= doc.location %>
+                    </p>
                 </div>
                 <div>
                     <div class="each-feature" id="diff-feature">
@@ -150,11 +177,11 @@
     
                         </div>
                     </div>
-                    <p class="show-p" id="show-p7" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                    <p class="show-p" id="show-p7" >
+                        Average Fees is <%= doc.fees %>$ only.
+                        and you can have a free trial as well. 
+                    </p>
                 </div>
-                
-
-
             </div>
         </div>
     </section>
@@ -176,11 +203,11 @@
         <div class="footer1" >
         <img id="last-image" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png">
         <div id = "footer">
-            <span class="footer-content"><a href="doctor" >Doctors</a></span>
-            <span class="footer-content"><a href="hospital" >Hospitals</a></span>
-            <span class="footer-content"><a href="treatment" >Treatments</a></span>
-            <span class="footer-content"><a href="contact-us" >Contact Us</a></span>
-            <span class="footer-content" ><a href="FAQ" >FAQs</a></span>
+            <span class="footer-content"><a href="/doctor" >Doctors</a></span>
+            <span class="footer-content"><a href="/hospital" >Hospitals</a></span>
+            <span class="footer-content"><a href="/treatment" >Treatments</a></span>
+            <span class="footer-content"><a href="/contact-us" >Contact Us</a></span>
+            <span class="footer-content" ><a href="/FAQ" >FAQs</a></span>
         </div>
         </div>
         <div id = "last-footer">

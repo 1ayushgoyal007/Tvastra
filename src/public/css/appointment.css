@@ -28,18 +28,18 @@
     flex-direction: column;
     margin: 0;
     background-color: white;
-    padding: 20px;
-    padding-top: 0;
     border-radius: 5px;
     position: relative;
+}
+form{
+    text-align: left;
+    padding:20px ;
 }
 .labels{
     margin:0;
     font-family: Dark;
-    text-align: left;
     font-size: 1.2em;
-    letter-spacing: 0.5;
-    padding-top: 20px;
+    letter-spacing: 1;
 }
 .inputE{
     border:1px solid gray;
@@ -47,6 +47,7 @@
     padding: 20px;
     font-size: 1.3em;
     margin-top:20px ;
+    margin-bottom: 20px;
     height: 50px;
     width: 100%;
     color: gray;
@@ -57,9 +58,13 @@
     padding-top: 15px;
     font-weight: bolder;
 }
+.interval{
+    margin-bottom: 20px;
+}
 .upload-data{
     display: flex;
-    padding-top: 10px;
+    padding: 15px 0;
+
 }
 .no-file-chosen{
     font-weight: 800;
@@ -67,9 +72,11 @@
 }
 #textarea{
     margin-top: 15px;
+    width: 100%;
 }
 .appoint-btn{
     height:60px;
+    width: 100%;
     font-size: 1em;
     background-color: #152238;
     color: white;
@@ -105,3 +112,17 @@ and (max-device-width:1023px){
         margin-bottom: 170px;;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

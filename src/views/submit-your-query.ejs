@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enter Query</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/reset.css">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="stylesheet" href="/css/root.css">
+        <link rel="stylesheet" href="/css/submit-your-query.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-QkT0bewkYsfyn1R9KrC1bkvo9fE7tY0&libraries=places"></script>
+
+       
+    </head>
+    <body>
+          
+
+        <nav class="nav-bar" >
+            <div class="image-ico" >
+            <div class="imageii" >
+                <a href="index" ><img class= "image-01" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png"></a>
+            </div>
+            <div class="bar-icon" >
+                <i  onclick="showUl()" class="fa fa-bars"  id = "sign"></i>
+            </div>
+            </div>
+            <div class="ul-list" >
+                <ul class="contents" >
+                    <li><a href="/doctor">Doctor</a></li>
+                    <li><a href="/hospital">Hospital</a></li>
+                    <li class="dropdown" >
+                        <a href="/treatment">Treatment</a>
+                        <ul class="dropdown-content" >
+                            <li><a href="/">Cancer</a></li>
+                            <li><a href="/">Dentistry</a></li>
+                            <li><a href="/">CardioPedics Surgery</a></li>
+                            <li><a href="/">Cardiology Treatment</a></li>
+                            <li><a href="/">Infertility Specialist</a></li>
+                            <li><a href="/">Cancer</a></li>
+                        </ul>
+                    </li>
+                    <li class="/contact-us" ><a href="/contact-us">Contact Us</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </div>
+            <div class="top-btns" >  
+            <%    if(!currentUser){  %>
+                <button onclick="location.href = '/login';" id="btn1" >Login / Signup</button>
+            <%    }else{             %>
+                <button onclick="location.href = '/logout';" id="btn1" >Logout</button>
+            <%    }    %>
+                <button onclick="location.href = '/tvastra-plus';" id = "btn2" >Get a Qoute</button>
+    
+            </div>
+        </nav>
+
+
+        <section class="appoitnment-hero" >
+            <div class="main-container1">
+                <div class="heading" > 
+                <h3 class="appoint-h3" >Submit Your Query </h3>
+                </div>
+                <div class="container1" >
+                <form action="/" method="POST">
+                <input class="inputE" type="text" placeholder="Enter Name" required>
+                <input class="inputE" type="text" placeholder="Enter Phone Number" required>
+                <input class="inputE" type="email" placeholder="Enter Email" required>               
+                <textarea name="" id="textarea" cols="10" rows="10" placeholder="Enter Your Query Here" required></textarea>
+                <button class="appoint-btn" >SUBMIT</button>
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </form>
+
+                </div>
+                
+            </div>
+            <p class="last-p" >All rights Reserved Tvastra 2081</p>
+        </section>
+
+
+
+
+
+        <script src="/script/script.js"></script>
+    </body>
+
+</html>

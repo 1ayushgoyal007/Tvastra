@@ -25,44 +25,12 @@
 .FAQ{
     margin: 20px;
 }
-.profile-img{
-    margin: 10px;
-}
-
-.image-profile{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-.appoint-btn{
-    width: 100%;
-    margin: 10px 0;
-    height: 40px;
-    background-color: #152238;
-    color: white;
-    font-family: Dark;
-    border: 2px solid #152238;
-    border-radius: 3px;
-}
 
 .color-blue{
     padding-left: 50px;
     color: #4797d4;
 }
-.doc-details::before{
-    display: block;
-    content: "";
-    border-top: .1rem solid #4797d4;
-    width: 3rem;
-    transform: translateY(2rem);
-    margin:0;
-}
 
-.doc-details > p{
-    margin: 15px;
-    padding: 0;
-    text-align: center;
-}
 .contain-icons{
     padding-top: 5px;
 }
@@ -79,9 +47,7 @@
     justify-content: space-between;
 
 }
-/* .fa-arrow-circle-up{
-    cursor: pointer;
-} */
+
 #only-hide{
     display: block;
 }

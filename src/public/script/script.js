@@ -1,6 +1,7 @@
 window.onload  = function(){
     console.log("hello");
     var pImage = document.getElementsByClassName("float-right");
+    console.log(pImage);
     var temp2 = document.getElementById("p-btn1");
     var tempspan = document.getElementById("blue-btn1");
     temp2.style.border  = "2px solid #0099ff";
@@ -8,7 +9,6 @@ window.onload  = function(){
     tempspan.style.color = "#0099ff";
     for(var i=1;i<pImage.length;i++){
         pImage[i].style.display = "none";
-
     }
 }
 
@@ -44,6 +44,55 @@ function hidePara(id,hide,show){
 }
 
 
+
+function showHidden(){
+    var hide = document.querySelector(".hide-flex");
+    var show = document.querySelector(".show-flex");
+    hide.style.display = "block";
+    hide.style.display = "grid";
+    show.style.display = "none";
+}
+
+function hideShown(){
+    var hide = document.querySelector(".hide-flex");
+    var show = document.querySelector(".show-flex");
+    console.log(hide.style.display);
+    console.log(show.style.display);
+
+    if(hide.style.display !== "none" && show.style.display == "none"){
+        hide.style.display = "none";
+        show.style.display = "block";
+        show.style.display = "grid";
+    }
+}
+
+function showFirst(){
+    var firstCircle = document.querySelector(".first-circle");
+    var secondCircle = document.querySelector(".second-circle");
+
+    secondCircle.style.color = "#0099ff";
+    firstCircle.style.color = "rgba(128,128,128,0.5)";
+
+    var hideTestDiv = document.querySelector(".hide-test-div");
+    var hideTestDiv1 = document.querySelector(".hide-test-div1");
+    hideTestDiv.style.display = "grid";
+    hideTestDiv1.style.display = "none";
+
+}
+function showSecond(){
+    var firstCircle = document.querySelector(".first-circle");
+    var secondCircle = document.querySelector(".second-circle");
+
+    firstCircle.style.color = "#0099ff";
+    secondCircle.style.color = "rgba(128,128,128,0.5)";
+    
+    var hideTestDiv = document.querySelector(".hide-test-div");
+    var hideTestDiv1 = document.querySelector(".hide-test-div1");
+    hideTestDiv1.style.display = "grid";
+    hideTestDiv.style.display = "none";
+
+
+}
 
 
 

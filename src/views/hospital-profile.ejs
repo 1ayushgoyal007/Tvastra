@@ -21,23 +21,37 @@
         </div>
         <div class="ul-list" >
             <ul class="contents" >
-                <li><a href="doctor">Doctor</a></li>
-                <li><a href="hospital">Hospital</a></li>
-                <li><a href="treatment">Treatment</a></li>
-                <li><a href="contact-us">Contact Us</a></li>
-                <li><a href="about">About</a></li>
+                <li><a href="/doctor">Doctor</a></li>
+                <li><a href="/hospital">Hospital</a></li>
+                <li class="dropdown" >
+                    <a href="/treatment">Treatment</a>
+                    <ul class="dropdown-content" >
+                        <li><a href="/">Cancer</a></li>
+                        <li><a href="/">Dentistry</a></li>
+                        <li><a href="/">CardioPedics Surgery</a></li>
+                        <li><a href="/">Cardiology Treatment</a></li>
+                        <li><a href="/">Infertility Specialist</a></li>
+                        <li><a href="/">Cancer</a></li>
+                    </ul>
+                </li>
+                <li class="/contact-us" ><a href="/contact-us">Contact Us</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
         </div>
         <div class="top-btns" >  
-            <button onclick="location.href = 'login';" id="btn1" >Login / Signup</button>
-            <button id = "btn2" >Get a Qoute</button>
+        <%    if(!currentUser){  %>
+            <button onclick="location.href = '/login';" id="btn1" >Login / Signup</button>
+        <%    }else{             %>
+            <button onclick="location.href = '/logout';" id="btn1" >Logout</button>
+        <%    }    %>
+            <button onclick="location.href = '/tvastra-plus';" id = "btn2" >Get a Qoute</button>
 
         </div>
     </nav>
 
 
     <section class="hero" >
-        <h2>About Apollo Hospital</h2>
+        <h2>About <%= hospital.name %></h2>
         <h4>Home / Hospital Profile</h4>
     </section>
 
@@ -47,12 +61,12 @@
 
     <section class="profile" >  
         <div class="profile-img" >
-            <img  class="image-profile" src="https://th.bing.com/th?id=OIP.o8suu-vljViBtjLAP4FWCwAAAA&pid=Api&rs=1" alt="Profile-image">
+            <img  class="image-profile" src="<%= hospital.image %>" alt="Profile-image">
             <button class="appoint-btn" >Call Now</button>
         </div>
         <div class="details" >
             <div class="doc-details">
-                <h1 class="add color-blue">Duke Sanson</h1>
+                <h1 class="add color-blue"><%= hospital.name %></h1>
 
                 <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nemo aasi ayush gowt loren sdsqd ayus lioren and you cant do tha tand it.</p>
             </div>
@@ -69,7 +83,9 @@
 
                     </div>
                 </div>
-                <p class="show-p" id="show-p1" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                <p class="show-p" id="show-p1" >
+                    <%= hospital.specialization %> is our Speciality.
+                </p>
                 </div>
                 <div>
                     <div class="each-feature" id="diff-feature">
@@ -83,13 +99,15 @@
     
                         </div>
                     </div>
-                    <p class="show-p" id="show-p2" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                    <p class="show-p" id="show-p2" >
+                        <%= hospital.treatments %>+ SuccessFul Treatments. 
+                    </p>
                 </div>
                 <div>
                     <div class="each-feature" id="diff-feature">
                         <div>
                         <i class="fa fa-user fa-lg" aria-hidden="true"></i>
-                        <h3>Famous Doctots</h3>
+                        <h3>Famous Doctors</h3>
                         </div>
                         <div>
                             <i class="fa fa-arrow-circle-up " id = "only-hide2"  onclick="hidePara('show-p3','only-show2','only-hide2')" aria-hidden="true"></i>
@@ -97,7 +115,9 @@
     
                         </div>
                     </div>
-                    <p class="show-p" id="show-p3" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                    <p class="show-p" id="show-p3" >
+                        <%= hospital.doctors %>+ Trusted Doctors.
+                    </p>
                 </div>
                 <div>
                     <div class="each-feature" id="diff-feature">
@@ -111,13 +131,15 @@
     
                         </div>
                     </div>
-                    <p class="show-p" id="show-p4" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                    <p class="show-p" id="show-p4" >
+                        <%= hospital.infrastructure %> infrastrucutre with awesome Campus.
+                    </p>
                 </div>
                 <div>
                     <div class="each-feature" id="diff-feature">
                         <div>
                         <i class="fa fa-h-square fa-lg" aria-hidden="true"></i>
-                        <h3>Hospital Packages</h3>
+                        <h3>Beds</h3>
                         </div>
                         <div>
                             <i class="fa fa-arrow-circle-up " id = "only-hide4"  onclick="hidePara('show-p5','only-show4','only-hide4')" aria-hidden="true"></i>
@@ -125,7 +147,9 @@
     
                         </div>
                     </div>
-                    <p class="show-p" id="show-p5" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                    <p class="show-p" id="show-p5" >
+                        <%= hospital.beds %>+ beds.
+                    </p>
                 </div>
                 <div>
                     <div class="each-feature" id="diff-feature">
@@ -139,7 +163,9 @@
     
                         </div>
                     </div>
-                    <p class="show-p" id="show-p6" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                    <p class="show-p" id="show-p6" >
+                        <%= hospital.address %>
+                    </p>
                 </div>
                 <div>
                     <div class="each-feature" id="diff-feature">
@@ -153,7 +179,9 @@
     
                         </div>
                     </div>
-                    <p class="show-p" id="show-p7" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus iste repellendus commodi ex qui ipsa maxime atque corporis dolorem quod! Dicta eius accusantium eveniet placeat ipsa corporis ratione, alias odio.</p>
+                    <p class="show-p" id="show-p7" >
+                        <%= hospital.fees %>
+                    </p>
                 </div>
                 
 
@@ -180,11 +208,11 @@
         <div class="footer1" >
         <img id="last-image" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png">
         <div id = "footer">
-            <span class="footer-content"><a href="doctor" >Doctors</a></span>
-            <span class="footer-content"><a href="hospital" >Hospitals</a></span>
-            <span class="footer-content"><a href="treatment" >Treatments</a></span>
-            <span class="footer-content"><a href="contact-us" >Contact Us</a></span>
-            <span class="footer-content" ><a href="FAQ" >FAQs</a></span>
+            <span class="footer-content"><a href="/doctor" >Doctors</a></span>
+            <span class="footer-content"><a href="/hospital" >Hospitals</a></span>
+            <span class="footer-content"><a href="/treatment" >Treatments</a></span>
+            <span class="footer-content"><a href="/contact-us" >Contact Us</a></span>
+            <span class="footer-content" ><a href="/FAQ" >FAQs</a></span>
         </div>
         </div>
         <div id = "last-footer">

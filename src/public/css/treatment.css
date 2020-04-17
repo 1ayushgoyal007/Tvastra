@@ -147,6 +147,8 @@
       position: relative;
   }
 
+
+
   @media only screen and (min-device-width:767px) and (max-device-width:1023px){
     .hero > h2{
         font-size: 2.3em;
@@ -163,6 +165,7 @@
         margin: 20px 0;
     }
 
+    
     .footer1{
         display: flex;
         flex-direction: row-reverse;
@@ -246,6 +249,9 @@
         height: 330px;
         width: 100%;
     }
+    .hide-flex{
+        display: none;
+    }
 
   }
   @media only screen and (min-device-width:1023px){
@@ -273,6 +279,9 @@
       }
       .more-services{
           padding:20px 70px ;
+      }
+      .hide-flex{
+        display: none;
       }
       .flex-icon > h2{
           padding: 20px 0;

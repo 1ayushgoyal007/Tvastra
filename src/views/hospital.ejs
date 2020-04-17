@@ -23,16 +23,30 @@
         </div>
         <div class="ul-list" >
             <ul class="contents" >
-                <li><a href="doctor">Doctor</a></li>
-                <li><a href="hospital">Hospital</a></li>
-                <li><a href="treatment">Treatment</a></li>
-                <li><a href="contact-us">Other Services</a></li>
-                <li><a href="about">About</a></li>
+                <li><a href="/doctor">Doctor</a></li>
+                <li><a href="/hospital">Hospital</a></li>
+                <li class="dropdown" >
+                    <a href="/treatment">Treatment</a>
+                    <ul class="dropdown-content" >
+                        <li><a href="/">Cancer</a></li>
+                        <li><a href="/">Dentistry</a></li>
+                        <li><a href="/">CardioPedics Surgery</a></li>
+                        <li><a href="/">Cardiology Treatment</a></li>
+                        <li><a href="/">Infertility Specialist</a></li>
+                        <li><a href="/">Cancer</a></li>
+                    </ul>
+                </li>
+                <li class="/contact-us" ><a href="/contact-us">Contact Us</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
         </div>
         <div class="top-btns" >  
-            <button onclick="location.href = 'login';" id="btn1" >Login / Signup</button>
-            <button id = "btn2" >Get a Qoute</button>
+        <%    if(!currentUser){  %>
+            <button onclick="location.href = '/login';" id="btn1" >Login / Signup</button>
+        <%    }else{             %>
+            <button onclick="location.href = '/logout';" id="btn1" >Logout</button>
+        <%    }    %>
+            <button onclick="location.href = '/tvastra-plus';" id = "btn2" >Get a Qoute</button>
 
         </div>
     </nav>
@@ -53,6 +67,12 @@
     <div class="side-flex" >
         <div class="filter">
             <h5 class="filter-h5" >Filter by</h5>
+            <div class="side-buttons" >
+                <button class="side-btns">DLF cyber City<i class="fa fa-times inside-btn"></i></button>
+                <button class="side-btns" >Multi Organ Transplant<i class="fa fa-times inside-btn"></i></button>
+                <button class="side-btns" >Apollo Hospital<i class="fa fa-times inside-btn"></i></button>
+                <button class="side-btns" >30+<i class="fa fa-times inside-btn"></i></button>
+            </div>
         </div>
         <div class="sidebar">
             <div class="check" >
@@ -202,27 +222,34 @@
             <hr/>
           </div>
         </div>
-    <div >
+    <div>
+
+
+
+
+
+
+    <%  for(var i=0;i<hospitals.length;i++){  %>
     <div class="container" >
         <div>
-        <a href="hospital-profile" ><div class="new-add">
-            <h2 class="add color-blue">Apollo Hospital</h2>
+        <a href="/hospital/<%= hospitals[i]._id %>" ><div class="new-add">
+            <h2 class="add color-blue"><%= hospitals[i].name %></h2>
         </div></a>
         <div class="Hospital-features" >
         <div>
         <div class="icons" >
             <i  class="fa fa-map-marker icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >Delhi , Mathura Road , Sarita Vihar , Delhi-110076</span>
+            <span class="icon-p" ><%= hospitals[i].address %></span>
         </div>
         <div class="icons" >
             <i class="fa fa-bed icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >100 Beds</span>
+            <span class="icon-p" ><%= hospitals[i].beds %> Beds</span>
         </div>
         </div>
         <div>
         <div class="icons" >
             <i class="fa fa-stethoscope icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >Famous Treatments</span>
+            <span class="icon-p" > <%= hospitals[i].treatments %>+ Famous Treatments</span>
         </div>
         </div>
         </div>
@@ -240,165 +267,17 @@
             <button class="call-btn" >Call Now </button> 
         </div>
         </div>
-        <img class="hospital-img" src="https://i.ytimg.com/vi/-tgHw3wUWoY/maxresdefault.jpg" alt="Hospital">
+        <img class="hospital-img" src="<%= hospitals[i].image %>" alt="Hospital">
     </div>
-    <div class="container" >
-        <div>
-            <a href="hospital-profile" ><div class="new-add">
-            <h2 class="add color-blue">Fortis Hospital</h2>
-        </div></a>
-        <div class="Hospital-features" >
-        <div>
-        <div class="icons" >
-            <i  class="fa fa-map-marker icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >Delhi , Mathura Road , Sarita Vihar , Delhi-110076</span>
-        </div>
-        <div class="icons" >
-            <i class="fa fa-bed icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >100 Beds</span>
-        </div>
-        </div>
-        <div>
-        <div class="icons" >
-            <i class="fa fa-stethoscope icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >Famous Treatments</span>
-        </div>
-        </div>
-        </div>
-        <div class="buttons" >
-            <button class="btns" >Multi organ Transplant</button>
-            <button class="btns" >Orthopedic Surgery </button>
-            <button class="btns">Infertility Treatment</button>
-            <button class="btns">Dentistry</button>
-            <button class="btns">Cardiology</button>
-            <button class="btns">CAncer</button>
-            <button class="btns">+40 more</button>
-        </div>
 
-        <div class = "call-now" >
-            <button class="call-btn" >Call Now </button> 
-        </div>
-        </div>
-        <img class="hospital-img" src="https://i.ytimg.com/vi/-tgHw3wUWoY/maxresdefault.jpg" alt="Hospital">
-    </div>
-    <div class="container" >
-        <div>
-            <a href="hospital-profile" ><div class="new-add">
-            <h2 class="add color-blue">Rockland Hospital</h2>
-        </div></a>
-        <div class="Hospital-features" >
-        <div>
-        <div class="icons" >
-            <i  class="fa fa-map-marker icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >Delhi , Mathura Road , Sarita Vihar , Delhi-110076</span>
-        </div>
-        <div class="icons" >
-            <i class="fa fa-bed icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >100 Beds</span>
-        </div>
-        </div>
-        <div>
-        <div class="icons" >
-            <i class="fa fa-stethoscope icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >Famous Treatments</span>
-        </div>
-        </div>
-        </div>
-        <div class="buttons" >
-            <button class="btns" >Multi organ Transplant</button>
-            <button class="btns" >Orthopedic Surgery </button>
-            <button class="btns">Infertility Treatment</button>
-            <button class="btns">Dentistry</button>
-            <button class="btns">Cardiology</button>
-            <button class="btns">CAncer</button>
-            <button class="btns">+40 more</button>
-        </div>
+    <% } %>
 
-        <div class = "call-now" >
-            <button class="call-btn" >Call Now </button> 
-        </div>
-        </div>
-        <img class="hospital-img" src="https://i.ytimg.com/vi/-tgHw3wUWoY/maxresdefault.jpg" alt="Hospital">
-    </div>
-    <div class="container" >
-        <div>
-            <a href="hospital-profile" ><div class="new-add">
-            <h2 class="add color-blue">Primus Hospital</h2>
-        </div></a>
-        <div class="Hospital-features" >
-        <div>
-        <div class="icons" >
-            <i  class="fa fa-map-marker icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >Delhi , Mathura Road , Sarita Vihar , Delhi-110076</span>
-        </div>
-        <div class="icons" >
-            <i class="fa fa-bed icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >100 Beds</span>
-        </div>
-        </div>
-        <div>
-        <div class="icons" >
-            <i class="fa fa-stethoscope icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >Famous Treatments</span>
-        </div>
-        </div>
-        </div>
-        <div class="buttons" >
-            <button class="btns" >Multi organ Transplant</button>
-            <button class="btns" >Orthopedic Surgery </button>
-            <button class="btns">Infertility Treatment</button>
-            <button class="btns">Dentistry</button>
-            <button class="btns">Cardiology</button>
-            <button class="btns">CAncer</button>
-            <button class="btns">+40 more</button>
-        </div>
 
-        <div class = "call-now" >
-            <button class="call-btn" >Call Now </button> 
-        </div>
-        </div>
-        <img class="hospital-img" src="https://i.ytimg.com/vi/-tgHw3wUWoY/maxresdefault.jpg" alt="Hospital">
-    </div>
-    <div class="container" >
-        <div>
-            <a href="hospital-profile" ><div class="new-add">
-            <h2 class="add color-blue">Apollo Hospital</h2>
-        </div></a>
-        <div class="Hospital-features" >
-        <div>
-        <div class="icons" >
-            <i  class="fa fa-map-marker icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >Delhi , Mathura Road , Sarita Vihar , Delhi-110076</span>
-        </div>
-        <div class="icons" >
-            <i class="fa fa-bed icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >100 Beds</span>
-        </div>
-        </div>
-        <div>
-        <div class="icons" >
-            <i class="fa fa-stethoscope icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >Famous Treatments</span>
-        </div>
-        </div>
-        </div>
-        <div class="buttons" >
-            <button class="btns" >Multi organ Transplant</button>
-            <button class="btns" >Orthopedic Surgery </button>
-            <button class="btns">Infertility Treatment</button>
-            <button class="btns">Dentistry</button>
-            <button class="btns">Cardiology</button>
-            <button class="btns">CAncer</button>
-            <button class="btns">+40 more</button>
-        </div>
 
-        <div class = "call-now" >
-            <button class="call-btn" >Call Now </button> 
-        </div>
-        </div>
-        <img class="hospital-img" src="https://i.ytimg.com/vi/-tgHw3wUWoY/maxresdefault.jpg" alt="Hospital">
-    </div>
-    </div>
+
+
+
+</div>
     </div>
     <div id = "need-help">
         <div>
@@ -409,7 +288,7 @@
     </div>
 
     <footer class="very-last" >
-        <div>
+        <div class="footer1" >
         <img id="last-image" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png">
         <div id = "footer">
             <span class="footer-content"><a href="doctor" >Doctors</a></span>
@@ -432,7 +311,6 @@
             </div>
         </div>
     </footer>
-
 
 
     <script src="/script/script.js"></script>

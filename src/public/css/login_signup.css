@@ -84,7 +84,7 @@
 }
 .right-arrow{
     position: absolute;
-    bottom:88px;
+    bottom:98px;
     right: 35px;
 }
 .names{
@@ -108,6 +108,10 @@
 .top-name{
     padding-top: 30px;
 }
+form{
+    display: flex;
+    flex-direction: column;
+}
 .inputE{
     border:2px solid gainsboro;
     border-radius: 2px;
@@ -115,7 +119,8 @@
     font-size: 0.9em;
     margin:5px 0;
     height: 60px;
-    color: gainsboro;
+    color: black;
+    
 }
 .inputSE{
     border:2px solid gainsboro;

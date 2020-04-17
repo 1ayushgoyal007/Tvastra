@@ -11,6 +11,9 @@
     display:flex;
     justify-content: space-around;
 }
+.dropdown{
+    padding:0 7px;
+}
 .hero{
     background: linear-gradient( rgba(6, 194, 252, 0.527),skyblue), url(http://www.securitymagazine.com/ext/resources/SEC/2017/June/SEC0617-spot-feat-slide1_900px.jpg?1496250758);
 }
@@ -149,6 +152,25 @@ padding: 10px 20px;
 }
 .sidebar > h3{
     color:skyblue;
+}
+.side-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    margin:10px 0;
+}
+.side-btns{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 100px;
+    padding:10px 10px;
+    margin: 2px 2px 2px 0;
+    border: 1px solid grey;
+    font-size: 0.88em;
+}
+.inside-btn{
+    color: skyblue;
+    padding-left: 20px;
 }
 .btns{
     background-color: white;
@@ -299,20 +321,8 @@ padding: 10px 20px;
      #last-block{
         display: none;
     }
-    #footer{
-        margin:0;
-        padding-left: 40px;
-        padding-bottom: 20px;
-    }
-    .footer-content{
-        margin: 0;
-        padding-right: 20px;
-        font-weight: bolder;
-        line-height: 2;
-    }
- 
     #last-footer > div > p{
-        margin-left:40px;
+        margin-left:20px;
         font-weight: bolder;
     }
     .very-last{
@@ -349,6 +359,7 @@ padding: 10px 20px;
     .container{
         width:950px;
     }   
+
 }
  @media only screen and (min-device-width:1023px){
 
@@ -435,8 +446,8 @@ padding: 10px 20px;
         padding: 0;
     }
     .footer-content{
-        padding-right: 25px;
-        padding-left: 0;
+        padding: 0;
+        padding-right: 20px;
     }
     .very-last{
         padding:20px 40px;

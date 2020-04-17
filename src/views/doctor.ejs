@@ -22,19 +22,34 @@
         </div>
         <div class="ul-list" >
             <ul class="contents" >
-                <li><a href="doctor">Doctor</a></li>
-                <li><a href="hospital">Hospital</a></li>
-                <li><a href="treatment">Treatment</a></li>
-                <li><a href="contact-us">Other Services</a></li>
-                <li><a href="about">About</a></li>
+                <li><a href="/doctor">Doctor</a></li>
+                <li><a href="/hospital">Hospital</a></li>
+                <li class="dropdown" >
+                    <a href="/treatment">Treatment</a>
+                    <ul class="dropdown-content" >
+                        <li><a href="/">Cancer</a></li>
+                        <li><a href="/">Dentistry</a></li>
+                        <li><a href="/">CardioPedics Surgery</a></li>
+                        <li><a href="/">Cardiology Treatment</a></li>
+                        <li><a href="/">Infertility Specialist</a></li>
+                        <li><a href="/">Cancer</a></li>
+                    </ul>
+                </li>
+                <li class="/contact-us" ><a href="/contact-us">Contact Us</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
         </div>
         <div class="top-btns" >  
-            <button onclick="location.href = 'login';" id="btn1" >Login / Signup</button>
-            <button id = "btn2" >Get a Qoute</button>
+        <%    if(!currentUser){  %>
+            <button onclick="location.href = '/login';" id="btn1" >Login / Signup</button>
+        <%    }else{             %>
+            <button onclick="location.href = '/logout';" id="btn1" >Logout</button>
+        <%    }    %>
+            <button onclick="location.href = '/tvastra-plus';" id = "btn2" >Get a Qoute</button>
 
         </div>
     </nav>
+
 
 
 
@@ -215,192 +230,52 @@
           </div>
           </div>
         </div>
-    <div >
-    <div class="container" >
-        <div>
-            <a href="doc-profile" ><div class="new-add">
-                <h3 class="add color-blue">Duke Sanson</h3>
-            </div></a>
-            <div class="details" >
-            <div>
-            <div class="icons" >
-                <i class="fa fa-user icon-image aria-hidden="true"></i>
-                <span class="icon-p" >K</span>
-            </div>
-            <div class="icons" >
-                <i class="fa fa-user-circle-o icon-image" aria-hidden="true"></i>
-                <span class="icon-p" >K</span>
-            </div>
-            <div class="icons" >
-                <i class="fa fa-clock-o icon-image"  aria-hidden="true"></i>
-                <span class="icon-p" >Years of Experience</span>
-            </div>
-            </div>
-            <div>
-            <div class="icons" >
-                <i class="fa fa-briefcase icon-image" aria-hidden="true"></i>
-                <span class="icon-p" >job</span>
-            </div>
-            <div class="icons" >
-                <i class="fa fa-map-marker icon-image" aria-hidden="true"></i>
-                <span class="icon-p" >Greater Noida</span>
-            </div>
-            </div>
-            </div>
-            <div class = "call-now" >
-                <a href="book-appointment" ><button class="call-btn" >Book Appointment</button></a> 
-            </div>
-            </div>
-        <img class="doc-img" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--002.jpg" alt="Hospital">
-    </div>
- <div class="container" >
-    <div>
-        <a  href="doc-profile"><div class="new-add">
-            <h3 class="add color-blue">Shubham</h3>
-        </div></a>
-        <div class="details" >
-            <div>
-            <div class="icons" >
-                <i class="fa fa-user icon-image aria-hidden="true"></i>
-                <span class="icon-p" >K</span>
-            </div>
-            <div class="icons" >
-                <i class="fa fa-user-circle-o icon-image" aria-hidden="true"></i>
-                <span class="icon-p" >K</span>
-            </div>
-            <div class="icons" >
-                <i class="fa fa-clock-o icon-image"  aria-hidden="true"></i>
-                <span class="icon-p" >Years of Experience</span>
-            </div>
-            </div>
-            <div>
-            <div class="icons" >
-                <i class="fa fa-briefcase icon-image" aria-hidden="true"></i>
-                <span class="icon-p" >job</span>
-            </div>
-            <div class="icons" >
-                <i class="fa fa-map-marker icon-image" aria-hidden="true"></i>
-                <span class="icon-p" >Greater Noida</span>
-            </div>
-            </div>
-            </div>
-                    <div class = "call-now" >
-            <a href="book-appointment" ><button class="call-btn" >Book Appointment</button></a> 
-        </div>
-        </div>
-    <img class="doc-img" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--003.jpg" alt="Hospital">
-</div>
-<div class="container" >
-    <div>
-        <a href="doc-profile" ><div class="new-add">
-            <h3 class="add color-blue">Prakhar</h3>
-        </div></a>
-        <div class="details" >
-            <div>
-            <div class="icons" >
-                <i class="fa fa-user icon-image aria-hidden="true"></i>
-                <span class="icon-p" >K</span>
-            </div>
-            <div class="icons" >
-                <i class="fa fa-user-circle-o icon-image" aria-hidden="true"></i>
-                <span class="icon-p" >K</span>
-            </div>
-            <div class="icons" >
-                <i class="fa fa-clock-o icon-image"  aria-hidden="true"></i>
-                <span class="icon-p" >Years of Experience</span>
-            </div>
-            </div>
-            <div>
-            <div class="icons" >
-                <i class="fa fa-briefcase icon-image" aria-hidden="true"></i>
-                <span class="icon-p" >job</span>
-            </div>
-            <div class="icons" >
-                <i class="fa fa-map-marker icon-image" aria-hidden="true"></i>
-                <span class="icon-p" >Greater Noida</span>
-            </div>
-            </div>
-            </div>
-        <div class = "call-now" >
-            <a href="book-appointment" ><button class="call-btn" >Book Appointment</button></a> 
-        </div>
-        </div>
-    <img class="doc-img" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--004.jpg" alt="Hospital">
-</div>
-<div class="container" >
     <div>
 
-    <a href="doc-profile" ><div class="new-add">
-        <h3 class="add color-blue">Deepak</h3>
-    </div></a>
-    <div class="details" >
-        <div>
-        <div class="icons" >
-            <i class="fa fa-user icon-image aria-hidden="true"></i>
-            <span class="icon-p" >K</span>
-        </div>
-        <div class="icons" >
-            <i class="fa fa-user-circle-o icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >K</span>
-        </div>
-        <div class="icons" >
-            <i class="fa fa-clock-o icon-image"  aria-hidden="true"></i>
-            <span class="icon-p" >Years of Experience</span>
-        </div>
-        </div>
-        <div>
-        <div class="icons" >
-            <i class="fa fa-briefcase icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >job</span>
-        </div>
-        <div class="icons" >
-            <i class="fa fa-map-marker icon-image" aria-hidden="true"></i>
-            <span class="icon-p" >Greater Noida</span>
-        </div>
-        </div>
-        </div>    <div class = "call-now" >
-            <a href="book-appointment" ><button class="call-btn" >Book Appointment</button></a> 
-    </div>
-    </div>
-    <img class="doc-img" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--005.jpg" alt="Hospital">
-    </div>
+
+    <% for(var i=0;i<doctors.length;i++){ %>
     <div class="container" >
         <div>
-            <a href="doc-profile"><div class="new-add">
-                <h3 class="add color-blue">Duke Sanson</h3>
+            <a href="/doctor/<%= doctors[i]._id %>" ><div class="new-add">
+                <h3 class="add color-blue"><%= doctors[i].name %></h3>
             </div></a>
             <div class="details" >
             <div>
             <div class="icons" >
                 <i class="fa fa-user icon-image aria-hidden="true"></i>
-                <span class="icon-p" >K</span>
+                <span class="icon-p" ><%= doctors[i].specialization %></span>
             </div>
             <div class="icons" >
                 <i class="fa fa-user-circle-o icon-image" aria-hidden="true"></i>
-                <span class="icon-p" >K</span>
+                <span class="icon-p" ><%= doctors[i].awards %>+ Awards</span>
             </div>
             <div class="icons" >
                 <i class="fa fa-clock-o icon-image"  aria-hidden="true"></i>
-                <span class="icon-p" >Years of Experience</span>
+                <span class="icon-p" ><%= doctors[i].experience %> Years of Experience</span>
             </div>
             </div>
             <div>
             <div class="icons" >
                 <i class="fa fa-briefcase icon-image" aria-hidden="true"></i>
-                <span class="icon-p" >job</span>
+                <span class="icon-p" ><%= doctors[i].treatments %>+ Treatments</span>
             </div>
             <div class="icons" >
                 <i class="fa fa-map-marker icon-image" aria-hidden="true"></i>
-                <span class="icon-p" >Greater Noida</span>
+                <span class="icon-p" ><%= doctors[i].location %></span>
             </div>
             </div>
             </div>
             <div class = "call-now" >
-                <a href="book-appointment" ><button class="call-btn" >Book Appointment</button></a> 
+                <a href="/doctor/book-appointment" ><button class="call-btn" >Book Appointment</button></a> 
             </div>
             </div>
-        <img class="doc-img" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--002.jpg" alt="Hospital">
+        <img class="doc-img" src="<%= doctors[i].image %>" alt="doctor">
     </div>
+    <% } %>
+
+
+
+
     </div>
     </div>
     <div id = "need-help">

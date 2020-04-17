@@ -11,7 +11,9 @@
     display:flex;
     justify-content: space-around;
 }   
-
+.dropdown{
+    padding:0 7px;
+}
 .hero {
     background: linear-gradient( rgba(6, 194, 252, 0.527),skyblue), url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Doctors.png);
     background-size: cover;
@@ -204,6 +206,8 @@
     border-radius:5px;
     height:65px;
     width:220px;
+    font-family: Dark;
+    font-size: 1.1em;
     margin:0;
     
 }

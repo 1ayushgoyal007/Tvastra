@@ -22,7 +22,7 @@ h2{
 h3{
     font-family:Dark;
     font-size:1.4em;
-    padding: 30px 10px 20px 10px;
+    padding: 20px ;
 }
 h4{
     font-family: Dark;
@@ -58,12 +58,12 @@ a{
     font-size: 0.95em;
 }
 
-
 .nav-bar > .image-ico{
     display: flex;
     justify-content: space-between;
 
 }
+
 #sign{
     font-size:20px;
     line-height: 60px;
@@ -78,6 +78,27 @@ a{
 .contents > li {
     border-bottom: 2px solid rgba(128,128,128,0.5);
 }
+.contact-us{
+    border-top: 2px solid rgba(128,128,128,0.5);
+}
+.dropdown {
+    position: relative;
+    border: 1px solid white;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
 .top-btns{
     display: none;
@@ -177,7 +198,34 @@ a{
         padding-right: 15px;
     }
     #sign{
-        padding-right: 30px;
+        padding-right: 20px;
+    }
+    .footer1{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    #last-image{
+        width: 150px;
+        padding: 10px 20px;
+    }
+    #last-footer{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+    #last-footer > div > p{
+        font-weight: bolder;
+
+    }
+    .footer-content{
+        font-weight: bold;
+        margin: 0;
+        padding-left: 20px;
+        line-height: 3.3;
+    }
+    .corner{
+        padding-right: 20px;
     }
 }
 
@@ -229,7 +277,9 @@ a{
     #sign{
         display: none;
     }
-
+    .dropdown{
+        padding-top: 16px;
+    }
 
     .btn-first{
         height: 47px;
@@ -290,7 +340,11 @@ a{
         padding-left: 20px;
         font-weight: bolder;
     }
+    #last-image{
+        padding-right: 70px;
+        margin: 0;
+    }
     .corner{
-        padding-right: 20px;
+        padding-right: 70px;
     }
 }

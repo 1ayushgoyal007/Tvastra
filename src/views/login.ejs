@@ -22,16 +22,30 @@
         </div>
         <div class="ul-list" >
             <ul class="contents" >
-                <li><a href="doctor">Doctor</a></li>
-                <li><a href="hospital">Hospital</a></li>
-                <li><a href="treatment">Treatment</a></li>
-                <li><a href="contact-us">Contact Us</a></li>
-                <li><a href="about">About</a></li>
+                <li><a href="/doctor">Doctor</a></li>
+                <li><a href="/hospital">Hospital</a></li>
+                <li class="dropdown" >
+                    <a href="/treatment">Treatment</a>
+                    <ul class="dropdown-content" >
+                        <li><a href="/">Cancer</a></li>
+                        <li><a href="/">Dentistry</a></li>
+                        <li><a href="/">CardioPedics Surgery</a></li>
+                        <li><a href="/">Cardiology Treatment</a></li>
+                        <li><a href="/">Infertility Specialist</a></li>
+                        <li><a href="/">Cancer</a></li>
+                    </ul>
+                </li>
+                <li class="/contact-us" ><a href="/contact-us">Contact Us</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
         </div>
         <div class="top-btns" >  
-            <button onclick="location.href = 'login';" id="btn1" >Login / Signup</button>
-            <button id ="btn2" >Get a Qoute</button>
+        <%    if(!currentUser){  %>
+            <button onclick="location.href = '/login';" id="btn1" >Login / Signup</button>
+        <%    }else{             %>
+            <button onclick="location.href = '/logout';" id="btn1" >Logout</button>
+        <%    }    %>
+            <button onclick="location.href = '/tvastra-plus';" id = "btn2" >Get a Qoute</button>
 
         </div>
     </nav>
@@ -43,13 +57,21 @@
         <h3 class="login-h3" >Login</h3>
         </div>
         <div class="container1" >
-        <input class="inputE" type="text" placeholder="Enter Mobile Number" >
+
+
+        <form action="/login" method="post">
+        <input class="inputE" type="email" name="username" placeholder="Enter E-mail" required>
         <i class="fa fa-question-circle-o" aria-hidden="true"></i>
     
-        <input class="inputE" type="text" placeholder="Enter OPT" >
+        <input class="inputE" type="password" name="password"  placeholder="Enter password" required>
 
         <button class="input-btn" >LOGIN</button>
         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        </form>
+
+
+
+
         <span class="login-span" >Not Registered?<a href="sign-up" >Signup</a></span>
         </div>
         <div>
