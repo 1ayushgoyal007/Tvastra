@@ -41,9 +41,7 @@
 .show1{
     margin-bottom: 20px;
 }
-.dropdown{
-    padding:16px 7px;
-}
+
 #input01{
     border:1px solid white;
     height: 40px;
@@ -629,6 +627,9 @@ and (max-device-width : 1023px) {
 @media screen and (min-width:1023px){
     .nav-bar > label{
         display: none;
+    }
+    .dropdown{
+        padding:16px 7px;
     }
     .nav-bar > .contents{
         display: block;

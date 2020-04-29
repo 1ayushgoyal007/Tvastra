@@ -10,11 +10,12 @@
     padding: 0;
     padding-bottom: 20px;
     font-size: 1.8em;
+    color: white;
 }
 .hero > h4{
     font-family: Light;
     font-size: 1.2em;
-
+    color: white;
 }
 #map{
     height: 300px;

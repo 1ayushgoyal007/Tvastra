@@ -24,12 +24,11 @@ window.onload  = function(){
 
 function showUl(){
     var content = document.querySelector('.ul-list');
-    console.log(content.style.display);
-    if(content.style.display == 'none'){
-        content.style.display = 'block';
+    if(content.style.display == 'block'){
+        content.style.display = 'none';
     }
     else{
-        content.style.display = 'none';
+        content.style.display = 'block';
     }
 }
 

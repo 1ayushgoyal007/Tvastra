@@ -24,7 +24,9 @@ app.use(express.static(assetsPAth));
 
 
 //DB COnnectivity
-mongoose.connect("mongodb://localhost/Tvastra",{useNewUrlParser:true, useUnifiedTopology:true});
+mongoose.connect("mongodb+srv://ayush:ayush@tvastra-pzkqz.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true, useUnifiedTopology:true}).then(()=>{
+    console.log('Got Connections');
+});
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
@@ -309,6 +311,7 @@ function isloggedOut(req,res,next){
     }
 }
 
-app.listen(5000,function(){
-    console.log("Server Started Listening at 5000");
-})
+app.set("port", process.env.PORT || 5000);
+app.listen(app.get("port"), function(req,res){
+      console.log("Application running in port: " + app.get("port"));
+});

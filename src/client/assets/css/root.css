@@ -170,11 +170,16 @@ select > option{
     border-top: 2px solid rgba(128,128,128,0.5);
     display: none;
 }
-.contents > li {
+.content-li {
     border-bottom: 2px solid rgba(128,128,128,0.5);
 }
-.contact-us{
+.about-li{
     border-top: 2px solid rgba(128,128,128,0.5);
+    border-bottom: unset;
+}
+.logout-li{
+    border-top: 2px solid rgba(128,128,128,0.5);
+
 }
 .dropdown {
     position: relative;
@@ -380,7 +385,9 @@ select > option{
     .ul-list{
         display: block;
         border: unset;
-        
+    }
+    .logout-li{
+        display: none;
     }
     #sign{
         display: none;
