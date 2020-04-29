@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/appointment.css">
+</head>
+<body>
+
+    
+    <nav class="nav-bar" >
+        <div class="image-ico" >
+        <div class="imageii" >
+            <a href="/index" ><img class= "image-01" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png"></a>
+        </div>
+        <div class="bar-icon" >
+            <i  onclick="showUl()" class="fa fa-bars"  id = "sign"></i>
+        </div>
+        </div>
+        <div class="ul-list" >
+            <ul class="contents" >
+                <li><a href="/doctor">Doctor</a></li>
+                <li><a href="/hospital">Hospital</a></li>
+                <li class="dropdown" >
+                    <a href="/treatment">Treatment</a>
+                    <ul class="dropdown-content" >
+                        <li><a href="/">Cancer</a></li>
+                        <li><a href="/">Dentistry</a></li>
+                        <li><a href="/">CardioPedics Surgery</a></li>
+                        <li><a href="/">Cardiology Treatment</a></li>
+                        <li><a href="/">Infertility Specialist</a></li>
+                        <li><a href="/">Cancer</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+        <div class="top-btns" >  
+            <% if(currentUser){  %>
+                <button id="tvastra-plus-btn" onclick="location.href = '/tvastra-plus';" >Tvastra Plus</button>
+            <% } %>
+                <button id="btn2" onclick="location.href = '/';" >Get a Qoute</button>
+        </div>
+        <% if(currentUser){ %>
+            <div class="head-nav-user" >
+                <div class="nav-user" >
+                    <label ><%= currentUser.name.toUpperCase() %></label>
+                    <i class="fa fa-angle-down nav-profile-icon" onclick="showProfile()" aria-hidden="true"></i>
+                </div>
+
+                <ul class="nav-user-profile">
+                    <li class="user-profile-li" >
+                        <div class="nav-user-image" >
+                            <div class="contain-user-image" >
+                                <img class="user-image" src="/images/checkup.jpg" alt="image-user">
+                            </div>
+                            <div class="user-info" >
+                                <h4><%= currentUser.name.toUpperCase() %></h4>
+                                <span>9810832782</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="user-profile-lis border-top" ><a href="#">My Appointments</a></li>
+                    <li class="user-profile-lis"><a href="#">My Lab Tests</a></li>
+                    <li class="user-profile-lis"><a href="#">My Medicine Order</a></li>
+                    <li class="user-profile-lis"><a href="#">My Payments</a></li>
+                    <li class="user-profile-lis"><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+            
+        <% } %>
+    </nav>
+
+
+    <section class="appoitnment-hero" >
+        <div class="main-container1">
+            <div class="heading" > 
+            <h3 class="appoint-h3" >Book an Appointment </h3>
+            </div>
+            <div class="container1" >
+            <form method="POST">
+            <label class="labels">Select Appointment Date*</label>
+            <input class="inputE" type="date" placeholder="dd/mm/yy" required>
+
+            <label class="labels" >Time Interval*</label>
+            <div class="radio" >
+            <input type="radio" name="time" >
+            <label>Morning</label>
+            </div>
+            <div class="radio" >
+                <input type="radio" name="time" >
+                <label>AfterNoon </label>
+            </div>
+            <div class="interval radio"  >
+                <input type="radio" name="time" >
+                <label>Evening</label>
+            </div>
+
+            <label class="labels">Appointment Status/Urgency*</label>
+            <div class="radio" >
+                <input type="radio" name="status" >
+                <label>Routine Check-up</label>
+            </div>
+            <div class="radio" >
+                <input type="radio" name="status" >
+                <label>Non Urgent Check-up</label>
+            </div>
+            <div class="radio" >
+                <input type="radio" name="status" >
+                <label>Urgent Check-up</label>
+            </div>
+            <div class="radio interval" >
+                <input type="radio" name="status" >
+                <label>Surgical Appointment</label>
+            </div>
+
+            <label class="labels" >Upload Health Records</label>
+            <div class="upload-data" >
+                <button>choose file</button>
+                <label class="no-file-chosen">No file chosen</label>
+            </div>
+            <label class="labels">Appointment Details</label>
+            <textarea name="" id="textarea" cols="10" rows="10" required></textarea>
+
+            <button class="appoint-btn" >BOOK APPOINTMENT</button>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </form>
+            </div>
+            
+        </div>
+        <p class="last-p" >All rights Reserved Tvastra 2081</p>
+        </section>
+    
+
+        <script src="/scripts/script.js"></script>
+
+        
+</body>
+</html>

@@ -1,0 +1,253 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treatments</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/treatment.css">
+</head>
+<body>
+   
+    <nav class="nav-bar" >
+        <div class="image-ico" >
+        <div class="imageii" >
+            <a href="/index" ><img class= "image-01" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png"></a>
+        </div>
+        <div class="bar-icon" >
+            <i  onclick="showUl()" class="fa fa-bars"  id = "sign"></i>
+        </div>
+        </div>
+        <div class="ul-list" >
+            <ul class="contents" >
+                <li><a href="/doctor">Doctor</a></li>
+                <li><a href="/hospital">Hospital</a></li>
+                <li class="dropdown" >
+                    <a href="/treatment">Treatment</a>
+                    <ul class="dropdown-content" >
+                        <li><a href="/">Cancer</a></li>
+                        <li><a href="/">Dentistry</a></li>
+                        <li><a href="/">CardioPedics Surgery</a></li>
+                        <li><a href="/">Cardiology Treatment</a></li>
+                        <li><a href="/">Infertility Specialist</a></li>
+                        <li><a href="/">Cancer</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+        <div class="top-btns" >  
+            <% if(currentUser){  %>
+                <button id="tvastra-plus-btn" onclick="location.href = '/tvastra-plus';" >Tvastra Plus</button>
+            <% } %>
+                <button id="btn2" onclick="location.href = '/';" >Get a Qoute</button>
+        </div>
+        <% if(currentUser){ %>
+            <div class="head-nav-user" >
+                <div class="nav-user" >
+                    <label ><%= currentUser.name.toUpperCase() %></label>
+                    <i class="fa fa-angle-down nav-profile-icon" onclick="showProfile()" aria-hidden="true"></i>
+                </div>
+
+                <ul class="nav-user-profile">
+                    <li class="user-profile-li" >
+                        <div class="nav-user-image" >
+                            <div class="contain-user-image" >
+                                <img class="user-image" src="/images/checkup.jpg" alt="image-user">
+                            </div>
+                            <div class="user-info" >
+                                <h4><%= currentUser.name.toUpperCase() %></h4>
+                                <span>9810832782</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="user-profile-lis border-top" ><a href="#">My Appointments</a></li>
+                    <li class="user-profile-lis"><a href="#">My Lab Tests</a></li>
+                    <li class="user-profile-lis"><a href="#">My Medicine Order</a></li>
+                    <li class="user-profile-lis"><a href="#">My Payments</a></li>
+                    <li class="user-profile-lis"><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+            
+        <% } %>
+    </nav>
+
+    <section class="hero" >
+        <h2>Dentistry</h2>
+        <h4>Home / Dentistry</h4>
+    </section>
+
+
+
+<section class="main" >
+    <div class="main1" >
+    <div class="Vaccination" >
+        <h2>Vaccination</h2>
+        <div>
+        <div class="contain-img" >
+            <img class="patient-img" src="https://www.brightsmileokc.com/wp-content/themes/brightsmileokc/assets/images/callout1@2x.jpg" alt="Patinet">
+        </div>
+        <div>
+        <div class="para" > 
+        <h3>About Dentistry Department</h3>
+        <p>The vaccination of dentists against various vaccine-preventable infections is the most important measure of primary prevention against such diseases which would otherwise prove fatel for both hte dentists and their patients..</p>
+        </div>
+        <ul class="vaccine-ul" >
+            <li>CF-related diabetes(monthly)</li>
+            <li>Gastrointensial (monthly)</li>
+            <li>CF-related live disease</li>
+            <li>Sweat testing (three times per month)</li>
+        </ul>
+        </div>
+        </div>
+    </div>
+
+
+
+    <div class="features" >
+        <div class="each-feature" >
+            <i class="fa fa-stethoscope fa-5x" aria-hidden="true"></i>
+            <h4>Central Nervous System</h4>
+            <p>Open visitations with only two visitors in a room at any time.no one under 12 years of age may</p>
+        </div>
+        <div class="each-feature" >
+            <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>
+            <h4>Allergic Disorders</h4>
+            <p>Open visitations with only two visitors in a room at any time.no one under 12 years of age may</p>
+        </div>
+        <div class="each-feature" >
+            <i class="fa fa-frown-o fa-5x" aria-hidden="true"></i>
+            <h4>Neoplastic disorders</h4>
+            <p>Open visitations with only two visitors in a room at any time.no one under 12 years of age may</p>
+        </div>
+    </div>
+    </div>
+
+
+
+   <div class="main2" >
+   <section class="service-details-section" > 
+    <div class="service-details" >
+        <h4>Service Details</h4>
+        <div>
+            <span class="Dark" >Price</span>
+            <span class="Dark light">from $340</span>
+        </div>
+        <div>
+            <span class="Dark">Duration</span>
+            <span class="Dark light">10 minutes</span>
+        </div>
+        <div>
+            <span class="Dark">Office</span>
+            <span class="Dark light">#46</span>
+        </div>
+        <div>
+            <span class="Dark">Doctor</span>
+            <span class="Dark light">Dr.Elizabeth Beard</span>
+        </div>
+        <div>
+            <span class="Dark">Categories </span>
+            <span class="Dark light">Family Medicines</span>
+        </div>
+    </div>
+    <div class="service-details" >
+        <h4>Schedule</h4>
+        <div>
+            <span class="Dark" >Tuesday</span>
+            <span class="Dark light">10:00am to 1:00am</span>
+        </div>
+        <div>
+            <span class="Dark">Friday</span>
+            <span class="Dark light">10:00am to 9:00ams</span>
+        </div>
+    </div>
+    
+   </section>
+   </div>
+    
+</section>
+
+
+    <section class="more-services">
+        <div class="flex-icon" >
+        <h2>More Services</h2>
+        <div>
+        <i class="fa fa-chevron-circle-left fa-2x " onclick= "hideShown()"  aria-hidden="true"></i>
+        <i class="fa fa-chevron-circle-right fa-2x" onclick="showHidden()"  aria-hidden="true"></i>
+        </div>
+        </div>
+        <div class="flex-image  show-flex" >
+        <div class="show-on-load" > 
+            <img class="patient-img1" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--010.jpg" alt="patient">
+            <h4>Cancer</h4>
+        </div>
+        <div class="show-on-load">
+            <img class="patient-img1" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--009.jpg" alt="patient">
+            <h4>Dentistry</h4>
+        </div>
+        <div  class="show-on-load">
+            <img class="patient-img1" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--008.jpg" alt="patient">
+            <h4>Cardiology Surgery</h4>
+        </div>
+        </div>
+        <div class="flex-image     hide-flex" >
+            <div class="show-on-load" > 
+                <img class="patient-img1" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--011.jpg" alt="patient">
+                <h4>Cardiology Treatment</h4>
+            </div>
+            <div class="show-on-load">
+                <img class="patient-img1" src="http://3.bp.blogspot.com/-lQTmWF4Sx5c/UIra1z5NapI/AAAAAAAAAGg/s-dyKmw-f6Q/s1600/female-doctor.jpg" alt="patient">
+                <h4>Infertility Specialist</h4>
+            </div>
+            <div  class="show-on-load">
+                <img class="patient-img1" src="https://www.bing.com/th?id=OIP.qEoplBA_vDurXrMrhHpwyAHaE8&pid=Api&rs=1" alt="patient">
+                <h4>Cancer</h4>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <footer class="very-last" >
+        <div class="footer1" >
+        <img id="last-image" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png">
+        <div id = "footer">
+            <span class="footer-content"><a href="doctor" >Doctors</a></span>
+            <span class="footer-content"><a href="hospital" >Hospitals</a></span>
+            <span class="footer-content"><a href="treatment" >Treatments</a></span>
+            <span class="footer-content"><a href="contact-us" >Contact Us</a></span>
+            <span class="footer-content" ><a href="FAQ" >FAQs</a></span>
+        </div>
+        </div>
+        <div id = "last-footer">
+            <div>
+            <p>All Rights Reserved. tvastra 2018</p>
+            </div>
+            <div class="corner" >
+                <i class="fa fa-facebook-official icon-size" aria-hidden="true"></i>
+                <i class="fa fa-pinterest-p icon-size" aria-hidden="true"></i>
+                <i class="fa fa-google icon-size" aria-hidden="true"></i>
+                <i class="fa fa-twitter icon-size" aria-hidden="true"></i>
+                <i class="fa fa-instagram icon-size" aria-hidden="true"></i>
+            </div>
+        </div>
+    </footer>
+
+ 
+
+
+    <script src="/scripts/script.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,298 @@
+.hero{
+    background: linear-gradient( rgba(128, 128, 128, 0.5),rgba(128,128,128,0.1)), url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/aboutUs_hero.jpeg);
+
+    background-size:  cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 100px 0;
+}
+.hero::before{
+    position: absolute;
+    z-index: -1;
+}
+.hero > h2{
+    font-size: 1.7em;
+    color: white;
+}
+.hero > p{
+    margin: 0;
+    padding: 20px;
+    padding-top: 0;
+
+}
+.video-background{
+    width: 100%;
+    height: 100%;
+    background-size:  cover;
+    background-position: center;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    
+}
+
+.first-section{
+    text-align: center;
+}
+.first-section > div> h3{
+    padding: 25px 20px;
+    letter-spacing: 0.02rem;
+    font-size:1.5em
+}
+
+.first-section >div> p{
+    margin: 0;
+    padding:20px;
+    padding-top: 0;
+}
+
+.sign-image{
+    padding: 20px;
+}
+.contain-doc{
+    padding:0 20px;
+}
+.doc-image{
+    width: 100%;
+}
+.create-checkup{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.create-checkup-div1{
+    text-align: center;
+}
+.create-checkup-div1 > p{
+    color: gray;
+}
+
+.create-checkup >div> h3{
+    padding:25px 20px;
+    font-size: 1.5em;
+}
+.callout-inner > div > h3{
+    padding: 25px 20px;
+    font-size: 1.5em;
+    color: white;
+
+}
+.checkup-btn{
+    margin: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #218de0; 
+    border:2px solid #218de0;
+    border-radius: 5px;
+    font-family: Dark;
+    letter-spacing: 0.05rem;
+    font-size: 0.9em;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    padding-bottom: 15px;
+}
+.details-div{
+    border: 1px solid rgba(128,128,128,0.8);
+    padding: 30px 0;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.very-big{
+    font-size: 1.5em;
+    font-family: Dark;
+    color: white;
+}
+.very-small{
+    font-size:0.8em;
+    color: gray;
+    font-family: Dark;
+}
+.join-our-team{
+    background-color: #9cbfda;
+    text-align: center;
+    padding: 25px;
+}
+.join-our-team >div> h3{
+    padding: 0;
+    color: white;
+    font-size:1.5em;
+}
+.join-our-team > div > p{
+    padding: 20px 0;
+}
+.join-our-team > div > button{
+    color: white;
+    background-color: #218de0;
+    border: 2px solid #218de0;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+@media only screen and (max-device-width:1023px){
+    .video-background{
+        display: none;
+    }
+
+    .video-bg{
+        display: none;
+    }
+    .callout-inner{
+        background-color: black;
+    }
+}
+@media only screen and (min-device-width:767px){
+    .first-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .first-grid{
+        grid-column: 1/4;
+        text-align: left;
+    }
+    .contain-doc{
+        grid-column:4/7;
+        margin-bottom: auto;
+        margin-top: 50px;
+    }
+    .sign-image{
+        padding-top: 0;
+    }
+
+    .create-checkup-div1{
+        text-align: left;
+    }
+    .create-checkup-div1 > p{
+        color: rgba(128,128,128,1);
+    }
+    .checkup-btn{
+        margin:40px 20px;
+    }
+    .details{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        padding-bottom: 25px;
+    }
+    .details-div{
+        margin: 0;
+    }
+    .footer1{
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 0;
+        justify-content: space-between;
+        line-height: 3.5;
+    }
+    #last-footer{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+    #last-footer > div > p{
+        font-weight: bolder;
+    }
+    .footer-content{
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+        font-weight: bolder;
+    }
+    #footer{
+        line-height: 4;
+    }
+    .corner{
+        padding-right: 20px;
+    }
+    #last-image{
+        height: 40px;
+        width: 150px;
+        padding-top: 10px;
+        padding-right: 20px;
+    }
+
+
+}
+
+
+@media only screen and ( min-device-width:1023px){
+    .hero{
+        background-position: unset;
+    }
+    #last-image , .corner{
+        padding-right: 70px;
+    }
+    .first-section{
+        padding: 0 50px;
+    }
+    .doc-image{
+        width: 60%;
+    }
+    .sign-image{
+        padding-bottom: 25px;
+    }
+    .create-checkup{
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 50px;
+    }
+    .callout-inner{
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 50px;
+    }
+    .video-background{
+        position: relative;
+        bottom: 20px;
+    }
+    .details{
+        padding-top: 20px;
+    }
+    .join-our-team{
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 70px;
+    }
+    .join-our-team > div > h3 {
+        text-align: left;
+    }
+    .join-our-team > div > p{
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+    }
+    .submit-btn{
+        height: 60px;
+        width: 200px;
+        font-family: Dark;
+    }
+    .video-bg{
+        width:100%;
+        height: auto;
+    }
+    .vedeo{
+        width:100%;
+        height: 500px;
+        object-fit: cover;
+    }
+    .callout{
+        position: relative;
+        width:auto;
+    }
+    .callout-inner{
+        position: absolute;
+        bottom: 10%;
+        padding: 50px;
+
+
+    }
+}

@@ -1,28 +1,39 @@
 var express = require("express");
 var app = express();
+var path = require("path");
 var ejs = require('ejs');
-app.use(express.static("public"));
 app.set('view engine','ejs');
 var mongoose =  require("mongoose");
-// var session = require('express-session')
 var passport = require('passport');
+var flash = require('connect-flash');
 var localStrategy = require('passport-local');
+var TotpStrategy = require('passport-totp').Strategy;
+var Nexmo = require('nexmo');
 
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
+app.use(flash())
 
-mongoose.connect("mongodb://localhost/Tvastra");
+//Changing Directory PAth-------------------->
+const viewsPath = path.join(__dirname,'./client/views');
+app.set("views",viewsPath);
+var assetsPAth = path.join(__dirname,'./client/assets');
+app.use(express.static(assetsPAth));
+
+
+//DB COnnectivity
+mongoose.connect("mongodb://localhost/Tvastra",{useNewUrlParser:true, useUnifiedTopology:true});
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 
 
 // Requiring Models
-var Doctor = require("./models/doctor");
-var Hospital = require("./models/hospital");
-var User = require("./models/user");
+var Doctor = require("./backend/databases/doctor");
+var Hospital = require("./backend/databases/hospital");
+var User = require("./backend/databases/user");
 
 
 //Passport Configuration----------------------------->
@@ -35,16 +46,21 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(new localStrategy(User.authenticate()));
+
+
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use(function(req,res,next){
     res.locals.currentUser = req.user;
+    res.locals.error = req.flash("error");
+    res.locals.success  = req.flash("success");
     next();
 });
 
 //Routes-------------------->
 app.get("/",isloggedIn,function(req,res){
+    
     res.redirect("/index");
 })
 
@@ -108,16 +124,16 @@ app.get("/sign-up",isloggedOut,function(req,res){
 
 //POST Route
 app.post("/sign-up",isloggedOut,function(req,res){
-    var newUser = new User({username: req.body.username});
-    console.log(newUser);
+    var newUser = new User({username: req.body.username,name: req.body.name , contactNo : req.body.contactNo});
     console.log(req.body.password);
     User.register(newUser,req.body.password,function(err,user){
         if(err){
-            console.log(err);
+            console.log("err-------------------------------------------------------------->",err);
+            req.flash("error",err.message)
             return res.redirect("back");
         }
         else{
-            console.log(user);
+            console.log("user------------------------------------------------------------->",user);
             res.redirect("/login");
         }
     }) 
@@ -127,26 +143,28 @@ app.post("/sign-up",isloggedOut,function(req,res){
 
 
 
-//Login Route--------------------->
+//Login Route-------------------------------->
 //GET Route
 app.get("/login",isloggedOut,function(req,res){
     res.render("login");
 });
 
 //POST Route
-// app.post("/login",passport.authenticate('local'),function(req,res){
-//     res.redirect("/index");
-// });
 app.post('/login',isloggedOut,passport.authenticate('local',{
     successRedirect:"/index",
-    failureRedirect:"/login"
+    failureRedirect:"/login",
+    successFlash:"Login Successfully",
+    failureFlash:"Invalid Email or Password"
 }),function(req,res){
     //Do Nothing!
 });
 
 
+
+
 //Logout Route-------------------->
 app.get("/logout",isloggedIn,function(req,res){
+    req.flash("success","Logout Successfully");
     req.logout();
     res.redirect("/login");
 })
@@ -266,6 +284,7 @@ app.get("/hospital/:id",isloggedIn,function(req,res){
 
 
 app.get("*",isloggedIn,function(req,res){
+    req.flash("error","Invalid Url");
     res.render('default');
 })
 
@@ -274,8 +293,10 @@ app.get("*",isloggedIn,function(req,res){
 //MiddleWare-------------------------->
 function isloggedIn(req,res,next){
     if(req.isAuthenticated()){
+        
         return next();
     }else{
+        req.flash("error","Login First!");
         res.redirect("/login");
     }
 }
