@@ -96,7 +96,7 @@ app.get("/treatment",isloggedIn,function(req,res){
     res.render("treatment");
 })
 
-app.get("/contact-us",isloggedIn,function(req,res){
+app.get("/contact-us",function(req,res){
     res.render("contact-us");
 })
 
