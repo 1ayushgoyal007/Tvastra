@@ -11,17 +11,25 @@
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-QkT0bewkYsfyn1R9KrC1bkvo9fE7tY0&libraries=places"></script>
 
         <script>
-        var searchInput = 'input01';
+            var searchInput = 'input01';
 
-        $(document).ready(function () {
-        var autocomplete;
-        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-            types: ['geocode'],
-        });
-        console.log(autocomplete);
-         });
-        </script>
-    </head> 
+            var callback = function(){
+                var autocomplete;
+                autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+                types: ['geocode'],
+                    });
+                };
+            if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+            ){
+            callback();
+            } else{
+            document.addEventListener("DOMContentLoaded", callback);
+            }
+
+            </script>
+
+    </head>
     <body>
 
         <% if(success && success.length>0){ %>
@@ -135,6 +143,20 @@
     </div>
 
 
+<!-- For Searching In Search Bar -->
+<div class="hero-search-items" style="display: none;">
+    
+    <% for(var i=0; i< doctors.length;i++){  %>
+        <a class="each-doctor-item" href="/doctor/<%= doctors[i]._id %>"><%= doctors[i].name %></a>
+    <% } %>
+    
+    <% for(var i=0; i< hospitals.length;i++){  %>
+        <a class="each-hospital-item" href="/hospital/<%= hospitals[i]._id %>"> <%= hospitals[i].name %> </a>
+    <% } %>
+ 
+
+</div>
+<!-- For Searching In Search Bar -->
 
 
     <div id= "how-it-works">
@@ -513,6 +535,7 @@
     
 
     <script src="/scripts/script.js"></script>
+    <script src="/scripts/search.js"></script>
 
     </body>
 </html>

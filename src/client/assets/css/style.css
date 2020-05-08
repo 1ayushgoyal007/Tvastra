@@ -41,7 +41,9 @@
 .show1{
     margin-bottom: 20px;
 }
-
+.dropdown{
+    padding-top:0.99rem;
+}
 #input01{
     border:1px solid white;
     height: 40px;
@@ -163,14 +165,20 @@ border-style: none;
 .suggestions{
     background: white;
     position: absolute;
-    width: 24.5%;
-    top:74.7%;
+    width: 22.3%;
+    top:74.6%;
+    z-index: 1;
+
 }
 .result{
-    height: 50px;
+    height: 52px;
     font-weight:400;
     border: 1px solid rgba(128,128,128,0.2);
     text-align: left;
+}
+.result:hover{
+    background-color: #cccccc;
+    border-left: 5px solid #152238;
 }
 .container{
     text-align:center;
@@ -572,6 +580,7 @@ and (max-device-width : 1023px) {
     }
     .btn-first{
         width: 170px;
+        height: 45px;
     }
     .image-01{
         padding: 15px 25px;
@@ -628,15 +637,12 @@ and (max-device-width : 1023px) {
     .nav-bar > label{
         display: none;
     }
-    .dropdown{
-        padding:16px 7px;
-    }
-    .nav-bar > .contents{
+    .contents{
         display: block;
         display: flex;
         line-height: 50px;
     }
-    .nav-bar > .btni{
+    .btni{
         margin:20px 70px 20px 0;
     }
     .container{
@@ -663,6 +669,19 @@ and (max-device-width : 1023px) {
     .image-01{
         padding:20px 70px;
         width:70%;
+    }
+    .fa-map-marker{
+        height: 17px;
+        border-right: 1px solid white;
+        width: 17px;
+        border-style: none;
+    }
+    .fa-crosshairs{
+        border-left: 1px solid white;
+        height: 17px;
+        width:17px;
+        border-style: none;
+
     }
     #how-it-works{
         padding:70px;

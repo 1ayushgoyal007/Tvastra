@@ -241,67 +241,67 @@ function Display(str,btnn,sps){
 
 
 
-var target = document.getElementById("input02");
-var results = document.querySelector(".suggestions");
-var Hospitals = ["Apollo Hospital","Primus Super Hospital","Fortis Hospital","Rockland Hospital"];
-var doctors = ["Duke Sanson","Georgea Peter","charlie moon","Rose moon"];
-var treatments = ["Dentistry","Cancer","Cardiologic Treatment","Multi organ Transplant","Orthopedic Surgery","Infertility Treatment"];
-var matches = [];
+// var target = document.getElementById("input02");
+// var results = document.querySelector(".suggestions");
+// var Hospitals = ["Apollo Hospital","Primus Super Hospital","Fortis Hospital","Rockland Hospital"];
+// var doctors = ["Duke Sanson","Georgea Peter","charlie moon","Rose moon"];
+// var treatments = ["Dentistry","Cancer","Cardiologic Treatment","Multi organ Transplant","Orthopedic Surgery","Infertility Treatment"];
+// var matches = [];
 
-target.focus();
-target.addEventListener("keyup",function(event){
+// target.focus();
+// target.addEventListener("keyup",function(event){
 
-    results.innerHTML = "";
-    toggleResults("hide");
+//     results.innerHTML = "";
+//     toggleResults("hide");
 
-    if(this.value.length > 0 ){
-        matches = getMatches(this.value);
+//     if(this.value.length > 0 ){
+//         matches = getMatches(this.value);
         
-        if(matches.length > 0){
-            displayMatches(matches);
-        }
-    }
-});
+//         if(matches.length > 0){
+//             displayMatches(matches);
+//         }
+//     }
+// });
 
-function toggleResults(action){
-    if(action == "show"){
-        results.classList.add("visible");
-    }
-    else{
-        results.classList.remove("visible");
-    }
-}
+// function toggleResults(action){
+//     if(action == "show"){
+//         results.classList.add("visible");
+//     }
+//     else{
+//         results.classList.remove("visible");
+//     }
+// }
 
-function getMatches(text){
-    var match = [];
-    for(var i=0;i<Hospitals.length;i++){
-        if(Hospitals[i].toLowerCase().indexOf(text.toLowerCase()) != -1){
-            match.push(Hospitals[i]);
-        }
-    }
-    for(var i=0;i<doctors.length;i++){
-        if(doctors[i].toLowerCase().indexOf(text.toLowerCase()) != -1){
-            match.push(doctors[i]);
-        }
-    }
-    for(var i=0;i<treatments.length;i++){
-        if(treatments[i].toLowerCase().indexOf(text.toLowerCase()) != -1){
-            match.push(treatments[i]);
-        }
-    }
-    if(match.length>0){
-    return match;
-    }
-    else{
-        return ["Search not found"];
-    }
-}
-function displayMatches(list){
-    var j=0;
-    while(j<list.length){
-        results.innerHTML += '<li class = "result" >' + list[j] +'</li>';
-        j++;
-    }
-    toggleResults("show");
-}
+// function getMatches(text){
+//     var match = [];
+//     for(var i=0;i<Hospitals.length;i++){
+//         if(Hospitals[i].toLowerCase().indexOf(text.toLowerCase()) != -1){
+//             match.push(Hospitals[i]);
+//         }
+//     }
+//     for(var i=0;i<doctors.length;i++){
+//         if(doctors[i].toLowerCase().indexOf(text.toLowerCase()) != -1){
+//             match.push(doctors[i]);
+//         }
+//     }
+//     for(var i=0;i<treatments.length;i++){
+//         if(treatments[i].toLowerCase().indexOf(text.toLowerCase()) != -1){
+//             match.push(treatments[i]);
+//         }
+//     }
+//     if(match.length>0){
+//     return match;
+//     }
+//     else{
+//         return ["Search not found"];
+//     }
+// }
+// function displayMatches(list){
+//     var j=0;
+//     while(j<list.length){
+//         results.innerHTML += '<li class = "result" >' + list[j] +'</li>';
+//         j++;
+//     }
+//     toggleResults("show");
+// }
 

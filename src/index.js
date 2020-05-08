@@ -60,15 +60,40 @@ app.use(function(req,res,next){
     next();
 });
 
+
+//Accessing All Doctors and Hospitals ------------------------------------>
+docs = [];
+hosps = [];
+Doctor.find({},function(err,allDocotrs){
+    if(!err){
+        docs = allDocotrs;
+    }
+});
+
+Hospital.find({},function(err,allHospitals){
+    if(!err){
+        hosps = allHospitals;
+    }
+});
+
+
+
 //Routes-------------------->
 app.get("/",isloggedIn,function(req,res){
     
     res.redirect("/index");
-})
+});
 
 app.get("/index",isloggedIn,function(req,res){
-    res.render("index");
-})
+    Doctor.find({},function(err,allDocotrs){
+        if(err){
+            console.log(err);
+        }else{
+            res.render("index",{hospitals:hosps,doctors:docs});
+        }
+    })
+    
+});
 
 app.get("/doctor",isloggedIn,function(req,res){
 
@@ -96,7 +121,7 @@ app.get("/treatment",isloggedIn,function(req,res){
     res.render("treatment");
 })
 
-app.get("/contact-us",function(req,res){
+app.get("/contact-us",isloggedIn,function(req,res){
     res.render("contact-us");
 })
 
