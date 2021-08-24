@@ -86,10 +86,10 @@
 
         <form action="/login" method="post">
         <div>
-            <input class="inputE" type="email" name="username" placeholder="Enter E-mail" required>
+            <input class="inputE" id="email" type="email" name="username" placeholder="Enter E-mail" required>
         </div>
         <div class="contain-password" >
-            <input class="inputE passwordField" type="password" name="password"  placeholder="Enter password"  
+            <input class="inputE passwordField" id="password" type="password" name="password"  placeholder="Enter password"  
             title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
             pattern= "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required >
             <i class="fa fa-eye"       aria-hidden="true" onclick="hidePassword()" ></i>
@@ -99,7 +99,7 @@
             <a href="#">Login with OTP</a>
             <a href="#">Forgot Password</a>
         </div>
-        <button class="input-btn" >LOGIN</button>
+        <button class="input-btn" id="login-btn">LOGIN</button>
         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
         </form>
 
